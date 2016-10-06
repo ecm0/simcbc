@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for d in `find . -type d -name 'mdc*[0-9]'`; do
+for d in `find $1 -maxdepth 1 -type d -name 'mdc*[0-9]'`; do
 echo "Entering $d"
 for f in $d/*.fits.gz; do
     echo "Converting $f"
