@@ -1,5 +1,8 @@
 clear
 
+load("randomgen_state.mat");
+rand("state",randomgen_state);
+
 % load ad-hoc galaxy catalog
 load("galaxies.mat");
 N_gal = rows(galaxies);
@@ -27,8 +30,7 @@ printf("num of mergers: %d for %f yr\n",N_merger,duration)
 load("glade_catalog.mat");
 completeness_distance = 200; % Mpc
 RA = unifrnd(0,360,N_merger,1);
-dec = acosd(unifrnd(-1,+1,N_merger,1));
-dec(dec > 90) = dec(dec > 90) - 180; # dec in [-90 deg, 90 deg] range
+dec = asind(unifrnd(-1,+1,N_merger,1));
 idx = find(selected_gal(:,3) < completeness_distance);
 
 % replace by coordinate of closest galaxy if within completeness_distance
