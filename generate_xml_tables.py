@@ -74,7 +74,7 @@ START_O2 = 1161993617 # Thu Nov 01 00:00:00 GMT 2016
 STOP_O2 =  1178841617 # Wed May 15 00:00:00 GMT 2017
 
 # fix random seed
-random.seed(1159107896)
+rand.seed(1159107896)
 
 class CompactBinary(object):
     """
@@ -335,7 +335,9 @@ if __name__ == "__main__":
 
         numoflines = sum(1 for _ in infile)
         random_times = numpy.sort(rand.randint(START_O2, STOP_O2, numoflines))
-    
+
+    with open(sys.argv[1]) as infile:
+
         for line in infile:
 
             # ignore comment lines
@@ -359,7 +361,7 @@ if __name__ == "__main__":
             geocent_end_time = random_times[counter_all]
 
             # generate remaining angles randomly
-            iota = 360.0 * rand.random()  # all angles are in degrees
+            iota = 180.0 * rand.random()  # all angles are in degrees
             phi_ref = 360.0 * rand.random()
             psi = 360.0 * rand.random()
 
@@ -394,7 +396,7 @@ if __name__ == "__main__":
 
 
             counter_all += 1
-            
+
             # select injection if sufficient SNR at one of the detectors
             if all(snr < threshold for snr in SNRs):
                 continue
