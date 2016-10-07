@@ -34,9 +34,9 @@ coinc_inspiral_table = ligolw_table.get_table(xmldoc2,
                                               lsctables.CoincInspiralTable.tableName)
 
 # Store infos in a .dat file.                                                                 
-with open('infos_recoveredGWsources_sim20160929.dat', 'a') as file :
+with open('summary.txt', 'a') as file :
 
-    print >> file, "# GPS mass1 mass2 dist SNR RA dec inclination skymap Egw"
+    print >> file, "# GPS date mass1 mass2 dist SNR RA dec inclination skymap Egw"
     #print "# GPS mass1 mass2 dist SNR RA dec inclination"                                                                                 
 
     for coinc in coinc_inspiral_table:
