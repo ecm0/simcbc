@@ -11,6 +11,7 @@ from glue.ligolw import lsctables
 from glue.ligolw import utils as ligolw_utils
 
 LITTLEHOPE_HOME = os.getcwd()
+#LITTLEHOPE_OPTS = '--detector H1 --detector L1 --detector V1 --min-triggers 2 --snr-threshold 4.0 --reference-psd {home}/psds_2016-17.xml --template-bank {home}/templates.xml --waveform "TaylorF2threePointFivePN"'.format(home=LITTLEHOPE_HOME)
 LITTLEHOPE_OPTS = '--detector H1 --detector L1 --min-triggers 2 --snr-threshold 4.0 --reference-psd {home}/psds_2016-17.xml --template-bank {home}/templates.xml --waveform "TaylorF2threePointFivePN"'.format(home=LITTLEHOPE_HOME)
 CMD_LITTLEHOPE = '{home}/my_bayestar_littlehope  {opts} {simdir}/{mdc_file} -o coinc.xml\n'
 
