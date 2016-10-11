@@ -47,8 +47,6 @@ infilename = command.get_input_filename(parser, args)
 # Python standard library imports.
 import os
 from collections import namedtuple
-import math
-
 
 # LIGO-LW XML imports.
 from glue.ligolw import ligolw
@@ -58,20 +56,14 @@ from glue.ligolw import utils as ligolw_utils
 from glue.ligolw import lsctables
 
 # glue and LAL imports.
-import lal
-from lal.lal import MSUN_SI as LAL_MSUN_SI
 import lalsimulation
 
 # BAYESTAR imports.
 from lalinference.bayestar import ligolw as ligolw_bayestar
-from lalinference.bayestar import timing
+import timing
 
 
 _fields = 'mass1 mass2 mchirp eta spin1z spin2z'
-
-def get_f_lso(mass1, mass2):
-    """Calculate the GW frequency during the last stable orbit of a compact binary."""
-    return 1 / (6 ** 1.5 * math.pi * (mass1 + mass2) * LAL_MSUN_SI)
 
 class TaylorF2RedSpinIntrinsicParams(namedtuple('intrinsic_params', _fields)):
     """Immutable container for just the intrinsic parameters belonging to a
@@ -159,7 +151,7 @@ for sim_inspiral_intrinsic_param in sim_inspiral_intrinsic_params:
     sngl_inspiral.mtotal = sngl_inspiral.mass1 + sngl_inspiral.mass2
     sngl_inspiral.mchirp = sim_inspiral_intrinsic_param.mchirp
     sngl_inspiral.eta = sim_inspiral_intrinsic_param.eta
-    sngl_inspiral.f_final = get_f_lso(sngl_inspiral.mass1, sngl_inspiral.mass2)
+    sngl_inspiral.f_final = timing.get_f_lso(sngl_inspiral.mass1, sngl_inspiral.mass2)
     sngl_inspiral.chi = sim_inspiral_intrinsic_param.chi
 
     # Add the row to the table in the document.
