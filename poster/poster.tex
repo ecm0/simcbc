@@ -21,6 +21,7 @@
 \documentclass[a0,portrait]{a0poster}
 
 \usepackage{ wasysym } % astrosun symbol.
+\usepackage{gensymb} % degree symbol
 \usepackage{multicol} % This is so we can have multiple columns of text side-by-side
 \columnsep=100pt % This is the amount of white space between the columns in the poster
 \columnseprule=3pt % This is the thickness of the black line between the columns in the poster
@@ -35,7 +36,7 @@
 %\usepackage{booktabs} % Top and bottom rules for table
 \usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
 %\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
-%\usepackage{wrapfig} % Allows wrapping text around tables and figures
+\usepackage{wrapfig} % Allows wrapping text around tables and figures
 
 %\usepackage{realboxes}
 
@@ -63,7 +64,7 @@
 \end{minipage}
 %
 \begin{minipage}[b]{0.25\linewidth}
-	\includegraphics[width=20cm]{logo.png}
+	\includegraphics[scale=.8]{logo.png}
 \end{minipage}
 
 \vspace{1cm} % A bit of extra whitespace between the header and poster content
@@ -75,44 +76,48 @@
 
  \begin{abstract}
 %\lipsum[20]
-On September 2015, the two LIGO interferometers realized the first direct detection of gravitational waves (GW) and opened a new era in astronomy history. A next step would be to detect some electromagnetic (EM) counterparts associated to GW events. Among them short gamma-ray bursts (SGRBs) produced by the coalescence of binary neutron stars are surely the most powerful sources detectable by high energy detectors. We thus address the question of the joint detectability of GW events by Advanced Virgo and Advanced LIGO interferometers, and EM events with the INTEGRAL satellite : what should be the statistical significance of the GW and the EM events to claim a joint detection ? \textcolor{blue}{BOTTOM LINE RESULTS : We show that...}
+On September 2015, the two LIGO interferometers realized the first direct detection of gravitational waves (GW) and inaugurated a multi-messenger era in astronomy history. A next step would be to detect some electromagnetic (EM) counterparts associated to GW events. Among them short gamma-ray bursts (SGRBs) produced by the coalescence of binary neutron stars are surely the most powerful sources detectable by high energy detectors. We thus address the question of the joint detectability of GW events by Advanced Virgo and Advanced LIGO interferometers, and EM events with the INTEGRAL mission.%satellite : What fraction of GW events can be recovered in the EM spectrum ? What should be the statistical significance of the GW and the EM events to claim a confident joint detection ? \textcolor{blue}{BOTTOM LINE RESULTS : We show that...}
  \end{abstract}
 
 \section*{Monte-Carlo simulation of GW events.}
 
 %\lipsum
 % SNR threshold HL = 6 : RHO_thres_NETWORK = sqrt(rho_H**2 + rho_L**2) = 6
+% On one hand, the signal only takes the inspiral phase into account via the use of non-spinning waveform 'TaylorF4ThreePN'.
+% As we want to reproduce an analogue study with \textsc{INTEGRAL} it justifies why our simulation settings are aligned on their work. This will allow further comparisons.
+% As a transition towards the details of the EM emission we estimated the total GW emitted energy $E_{\mathrm{EM}}$ of the simulated BNS systems thanks to Bernuzzi et al. \cite{2016PhRvD..94b4023B}, ie.  $E_{GW} \sim 1.5 \% \, M c^{2}$ where M is the total mass of the binary.
 
-\indent We used a catalogue of Milky Way-like galaxies in which populations of $Z_{\astrosun}$ metallicity binary neutron stars (BNS) systems have been simulated thanks to the Synthetic Universe database \cite{syntheticUniverse}. To do this we injected artificial GW signals corresponding to the coalescence of the two compact objects into O2b anticipated detector noise. On one hand, the signal only takes the inspiral phase into account via the use of non-spinning waveform 'TaylorF4ThreePN'. On the other hand, we took the O2b period to last for 3 months with a duty cycle of $50 \, \%$. Finally, we try to recover these fake GW signals using matched-filtering techniques thanks to the BAYESTAR pipeline. \\
-\indent This detectability study echoes the one of Patricelli et al. \cite{2016arXiv160606124P} who used the \textsc{FERMI} instrument to monitor gamma-ray events. As we want to reproduce an analogue study with \textsc{INTEGRAL} it justifies why our simulation settings are aligned on their work. This will allow further comparisons. As a sanity check we found the SNR, inclination and sky distribution of the events to be qualitatively consistent with both Patricelli et al. and Dominik et al. \textcolor{blue}{Add ref ?}. \\
-\textcolor{blue}{What to present ? HL ? HLV ? both ?} \\
-\indent As a transition towards the details of the EM emission we estimated the total GW emitted energy $E_{\mathrm{EM}}$ of the simulated BNS systems thanks to Bernuzzi et al. \cite{2016PhRvD..94b4023B}, ie.  $E_{GW} \sim 1.5 \% \, M c^{2}$ where M is the total mass of the binary.
-
-\section*{Assumptions on the EM emission.}
-
-\indent First hard point is to properly articulate between EM and GW emission. For this we took a rather simple model. Indeed, is has been considered it exist a proportionality relation between $E_{GW}$ and $E_{\mathrm{EM}}$ \textcolor{blue}{ref ? justification ?}.
-It has to be emphasized that every simulated GW event is associated to a gamma-ray event. As GRBs will then be monitored thanks to the SPI-ACS and IBIS instruments embarked on the \textsc{INTEGRAL} satellite mission, we thus have to convert the energy information into some constraints acting on the detectable energy flux by those instruments. The emitted EM flux is hence truncated to the \textsc{INTEGRAL} finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. \\
-\indent Observational evidences of GRBs EM emission generally show two kinds of emissions : a prompt emission in the gamma-ray or X-ray domain which corresponds to the collimated ejection of relativistic jet of matter, and an afterglow emission in the optic or radio domain produced after the ejecta has been slowed down by internally driven shocks between many layers. The former part is well modelled by the BAND emission spectrum with the following fixed parameters $\alpha_{\mathrm{BAND}} = - 0.5$, $\beta_{\mathrm{BAND}} = - 2.25$ and $E_{\mathrm{PEAK}} = 800 \, MeV$. The latter ... \textcolor{blue}{DESCRIBE AFTERGLOW}
-
-\section*{Visibility.}
-
-Estimate the visibility of the EM counterpart is equivalent to definite a follow-up strategy. It means to determine the fraction of the accessible sky region and how should we optimize both the exposure duration and the EM significance. \\
-Considering a passive follow-up strategy, the actual orientations are due to the planned observation constraints (galactic plane, center, etc.). The fluences are computed assuming a fixed beaming angle of $10 \, \mathrm{deg}$ for a $1 \, s$-long emission. \textcolor{blue}{fig ?}. The SPI-ACS and IBIS/Veto instruments show a complementary in the covered sky region. \textcolor{blue}{fig ?}
-%Should INTEGRAL follow its observation plan and re-point while asked by LIGO/Virgo triggers ?
-%How the follow-up strategy will be determined depends on the sky region area.
-%\textcolor{blue}{PUT PLOT RATE OF DETECTIONS IN MONTHS VS. SIGNIFICANCE}
-%We are able to recover 25 \% of the events in a 6-months run with a 5 sigma significance if we assume INTEGRAL stay focus during 0.5 day on a given source.
+\indent We used a catalogue of Milky Way-like galaxies in which populations of $Z_{\astrosun}$ metallicity binary neutron stars (BNS) systems have been simulated thanks to the Synthetic Universe database \cite{syntheticUniverse}. To do this we injected artificial GW signals corresponding to the coalescence of the two compact objects into O2b anticipated detector noise.  We took the O2b period to last for 3 months with a duty cycle of $50 \, \%$. Finally, we try to recover these fake GW signals using matched-filtering techniques thanks to the BAYESTAR pipeline. \\
+\indent This detectability study echoes the one of Patricelli et al. \cite{2016arXiv160606124P} who used the \textsc{FERMI} instrument to monitor gamma-ray events.  As a sanity check we found the SNR, inclination and sky distribution of the events to be qualitatively consistent with both Patricelli et al. and Dominik et al. \textcolor{blue}{Add ref ?} results. \\
 
 
-\section*{Detectability.}
+\section*{INTEGRAL and the EM emission.}
 
-\section*{Results.}
+% It has been considered it exist a proportionality relation between $E_{GW}$ and $E_{\mathrm{EM}}$ \textcolor{blue}{ref ? justification ?}. 
 
-%\lipsum[20]
+\indent Observational evidences of GRBs generally show two kinds of EM emissions : a prompt emission in the gamma-ray or X-ray domain which corresponds to the collimated ejection of relativistic jets of matter, and an afterglow emission in the X-ray, optic or radio domain produced after the ejecta has been slowed down by internally driven shocks between many layers. \\
+\indent It has to be emphasized that every simulated GW event is associated to a gamma-ray event. Then the EM follow-up strategy is partially determined by instrumental performances. The INTEGRAL satellite embarks to instruments : the SPI- ACS gamma-ray spectrometer and the IBIS imager. The former takes advantage of a very wide field of view (FoV) essential to monitor prompt emissions (passive follow-up) whereas the latter has a good enough spatial resolution once is is on source (active follow-up).
 
-\section*{Discussion.}
+% As GRBs will then be monitored thanks to the SPI-ACS and IBIS instruments embarked on the \textsc{INTEGRAL} satellite mission, we thus have to convert the energy information into some constraints acting on the detectable energy flux by those instruments. The emitted EM flux is hence truncated to the \textsc{INTEGRAL} finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. \\
 
-%\lipsum[20]
+\begin{center}\vspace{.5cm}
+    \includegraphics[scale=1.4]{figures/spectra.png}
+    \captionof{figure}{Prompt and afterglow emission spectra from SGRBs systems. Flux have been normalized with respect to INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$.}
+    \label{spectra}
+\end{center}
+
+\subsection*{Prompt emission.}
+
+The prompt emission is well modelled by the BAND emission spectrum with the following fixed parameters $\alpha_{\mathrm{BAND}} = - 0.5$, $\beta_{\mathrm{BAND}} = - 2.25$ and $E_{\mathrm{peak}} = 800 \, MeV$. As it is associated to the coalescence of the BNS it is not expected to last more than a few seconds. In other word, the default observation strategy is a passive follow-up. Hence, it is all the more important to monitor these events with a large FoV instrument. Choosing an isotropic sky distribution of our GW events, we show that INTEGRAL detects 55 \% of the events with a $20 \, \sigma$-significance for faint event and 10 \% of the events with a $30 \, \sigma$-significance for loud events if the ALIGO/Advanced Virgo network is considered. \textcolor{blue}{show fig (2)} \\
+\indent We also show is exists a sky region complementarity between the two onboard instruments. Indeed, one has an excellent FoV whereas the other has a better resolution. That is why we achieve with a better sensitivity combining the two. \textcolor{blue}{show fig (1)}.
+
+
+\subsection*{Afterglow emission.}
+
+% Power law model see Eq(1) of 'THE FERMI GBM GAMMA-RAY BURST SPECTRAL CATALOG: FOUR YEARS OF DATA' - Gruber et al 
+
+As well the afterglow emission in the X-ray lasts until 3 days after the coalescence of the BNS system and is modelled by a cut-off power law with $\lambda = - 0.5$ and $E_{\mathrm{peak}} = 600 \, keV$. As stated before the X-ray emission we investigate occurs until few days or weeks after the prompt emission. It thus enable us to re-point the INTEGRAL satellite and to align the IBIS instrument onto the source. The observation strategy is then conditioned by two factors. The first one is the error-box area covered by INTEGRAL at the prompt emission time. We decide from the right figure ?? we can trigger a follow-up if more than 30 \% of the error box is initially covered. \textcolor{blue}{show fig (2)} \\
+The left figure brings an answer to the second question : what is the duration limit after the prompt emission within which we are able to detect the SGRB source ? 
 
 %\begin{center}\vspace{.5cm}
 %    \includegraphics[height=20cm]{figures/test.png}
