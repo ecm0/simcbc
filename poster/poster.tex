@@ -41,9 +41,12 @@
 %\usepackage{realboxes}
 
 \renewcommand{\emph}[1]{\textbf{\color{blue}#1}}
+
+\newcommand{\vs}[1] {\textbf{\textcolor{red}{#1}}}
+
 %\renewcommand{\section}[2]{\Colorbox{lightgray}{\noindent {\Large \textbf{#2}} \hfill}}
 
-\usepackage{lipsum}
+%\usepackage{lipsum}
 
 \begin{document}
 
@@ -102,7 +105,7 @@ On September 2015, the two LIGO interferometers realized the first direct detect
 
 \begin{center}\vspace{.5cm}
     \includegraphics[scale=1.4]{figures/spectra.png}
-    \captionof{figure}{Prompt and afterglow emission spectra from SGRBs systems. Flux have been normalized with respect to INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$.}
+    \captionof{figure}{\vs{units are incompatible with a realistic model. also specify the model} Prompt and afterglow emission spectra from SGRBs systems. Flux have been normalized \vs{normalized to what?} with respect to INTEGRAL/SPI-ACS finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. }
     \label{spectra}
 \end{center}
 
@@ -113,6 +116,12 @@ The prompt emission is well modelled by the BAND emission spectrum with the foll
 
 
 \subsection*{Afterglow emission.}
+
+\begin{center}\vspace{.5cm}
+    \includegraphics[scale=1.4]{figures/covered_region.png}
+    \captionof{figure}{Cumulative distribution of the fraction of the LIGO/Virgo localization region accessible to INTEGRAL pointed follow-up observation in the LIGO/Virgo O2 run.}
+    \label{covered_region}
+\end{center}
 
 % Power law model see Eq(1) of 'THE FERMI GBM GAMMA-RAY BURST SPECTRAL CATALOG: FOUR YEARS OF DATA' - Gruber et al 
 
