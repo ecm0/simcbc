@@ -104,7 +104,8 @@
 
 \section*{Motivations}
 
-\ECM{Intro on LIGO Virgo -- Objective of the study and major steps.}
+\ECM{Intro on LIGO Virgo -- Objective of the study and major steps. Follow-up 
+campaing during O1. Constraints set by INTEGRAL on GW150914 \cite{2041-8205-820-2-L36}}
 
 \emph{We produce a end-to-end simulation of the search for gravitational-waves
 from binary neutron star mergers \textit{and} follow-up observation seeking a
@@ -181,14 +182,16 @@ $\lambda = - 0.5$ and $E_{\mathrm{peak}} = 600 \, keV$.
 
 \section*{The INTEGRAL mission and possible follow-up strategies}
 
-\ECM{Describe the relevant instruments here. Energy range covered. FOV.}
+\ECM{Volodymyr: Describe the relevant instruments here. Energy range covered. FOV. 
+Graphical scheme of the instrument? Tell the two possible follow-up strategies}
 
-The EM follow-up strategy is partially determined by instrumental
-performances. The INTEGRAL satellite embarks to instruments : the SPI- ACS
-gamma-ray spectrometer and the IBIS imager. The former takes advantage of a very
-wide field of view (FoV) essential to monitor prompt emissions (passive
-follow-up) whereas the latter has a good enough spatial resolution once is is on
-source (active follow-up).
+The INTEGRAL satellite embarks the SPI-ACS gamma-ray spectrometer and the IBIS
+imager. The former takes advantage of a very wide field of view (FoV) essential
+to monitor prompt emissions (passive follow-up) whereas the latter has a good
+spatial resolution once is is on source (active follow-up).
+
+The afterglow emission being of longer duration, it allows to re-point the
+INTEGRAL satellite and to align the IBIS instrument onto the source.
 
 % As GRBs will then be monitored thanks to the SPI-ACS and IBIS instruments embarked on the \textsc{INTEGRAL} satellite mission, we thus have to convert the energy information into some constraints acting on the detectable energy flux by those instruments. The emitted EM flux is hence truncated to the \textsc{INTEGRAL} finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. \\
 
@@ -196,39 +199,54 @@ source (active follow-up).
     \includegraphics[width=10cm]{figures/INTEGRAL.png}
 \end{center}
 
-
 \section*{Results}
 
-\subsection*{Prompt -- Passive follow-up}
+\subsection*{Passive follow-up of prompt emission}
 
-\begin{center}\vspace{.5cm}
-    \includegraphics[width=20cm]{figures/covered_region.png}
-    \captionof{figure}{Cumulative distribution of the fraction of the LIGO/Virgo localization region accessible to INTEGRAL pointed follow-up observation in the LIGO/Virgo O2 run.}
+\begin{center}
+    \includegraphics[width=11cm]{figures/fluence_distribution_12.png}
+ \includegraphics[width=11cm]{figures/sensitivity_distribution.png}
+    \includegraphics[width=11cm]{figures/significance_distribution_12.png}
+    \captionof{figure}{}
+\end{center}
+
+The fluence of the prompt emission associated to GW alerts is in the range
+$150--600 \times 10^-7$ erg cm$^{-2}$s$^{-1}$. This is much brighter than the
+limiting flux from SPI-ACS. Note the better sensitivity when combined with
+IBIS/Veto thanks to the complementarity of their field of view.  
+
+\ECM{Volodymyr, is the following true?}
+
+SPI-ACS detects with high significance $> 100 \, \sigma$ the prompt emission of
+all 4-sigma events oriented towards the detector within the beaming angle.
+
+\ECM{Volodymyr, please fill the XX}
+
+SPI-ACS and IBIS/Veto allows to follow XX \% of the alerts with a 
+$XX \, \sigma$ significance.
+
+\subsection*{Instrument repointing to follow afterglows}
+
+\ECM{Volodymyr, it is not clear in your notes what instrument (IBIS?) is being
+  used here. Can you specify? What is the ``currently assumed follow-up
+  strategy''?}
+
+\ECM{Volodymyr, what's the curve in blue in the covered region plot? In the same
+  plot, would be better to see distribution relative to all $SNR > X$ events --
+  saturate to 1 on the left.}
+
+\begin{center}
+    \includegraphics[width=11cm]{figures/covered_region_4-1.png}
+    \includegraphics[width=11cm]{figures/covered_region_12-1.png}
+    \includegraphics[width=11cm]{figures/ag_flux_4.png}
     \label{covered_region}
 \end{center}
 
-Choosing an isotropic sky distribution of our GW events, we show that INTEGRAL
-detects 55 \% of the events with a $20 \, \sigma$-significance for faint event
-and 10 \% of the events with a $30 \, \sigma$-significance for loud events if
-the aLIGO/Advanced Virgo network is considered.
+The fraction of the region accessible for pointed follow-ups is larger than The
+error-box area covered by INTEGRAL. We can trigger a follow-up if more than 30
+\% of the error box is initially covered.
 
-We also show that it exists a sky region complementarity between the two onboard
-instruments. Indeed, one has an excellent FoV whereas the other has a better
-resolution. That is why we achieve with a better sensitivity combining the two.
-
-\subsection*{Afterglow -- Instrument repointing}
-
-As stated before the X-ray emission we investigate occurs until few days or
-weeks after the prompt emission. It thus enable us to re-point the INTEGRAL
-satellite and to align the IBIS instrument onto the source. The observation
-strategy is then conditioned by two factors. The first one is the error-box area
-covered by INTEGRAL at the prompt emission time. We decide from the right figure
-?? we can trigger a follow-up if more than 30 \% of the error box is initially
-covered.
-
-The left figure brings an answer to the second question : what is the duration
-limit after the prompt emission within which we are able to detect the SGRB
-source ?
+\ECM{Volodymyr, what are the conclusions here?}
 
 % \section*{Conclusions}
 
@@ -238,7 +256,6 @@ source ?
 % instruments. We show in this poster that INTEGRAL is the appropriate to ensure a
 % follow-up for both the prompt and afterglow emissions, thanks to the IBIS and
 % SPI-ACES instruments.
-
 
 %----------------------------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS
