@@ -20,6 +20,8 @@
 
 \documentclass[a0,portrait]{a0poster}
 
+\usepackage{subcaption} 
+
 \usepackage{ wasysym } % astrosun symbol.
 \usepackage{gensymb} % degree symbol
 \usepackage{multicol} % This is so we can have multiple columns of text side-by-side
@@ -41,12 +43,9 @@
 %\usepackage{realboxes}
 
 \renewcommand{\emph}[1]{\textbf{\color{blue}#1}}
-
-\newcommand{\vs}[1] {\textbf{\textcolor{red}{#1}}}
-
 %\renewcommand{\section}[2]{\Colorbox{lightgray}{\noindent {\Large \textbf{#2}} \hfill}}
 
-%\usepackage{lipsum}
+\usepackage{lipsum}
 
 \begin{document}
 
@@ -77,7 +76,7 @@
 \begin{multicols}{2} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
 
 
- \begin{abstract}
+\begin{abstract}
 %\lipsum[20]
 On September 2015, the two LIGO interferometers realized the first direct detection of gravitational waves (GW) and inaugurated a multi-messenger era in astronomy history. A next step would be to detect some electromagnetic (EM) counterparts associated to GW events. Among them short gamma-ray bursts (SGRBs) produced by the coalescence of binary neutron stars are surely the most powerful sources detectable by high energy detectors. We thus address the question of the joint detectability of GW events by Advanced Virgo and Advanced LIGO interferometers, and EM events with the INTEGRAL mission.%satellite : What fraction of GW events can be recovered in the EM spectrum ? What should be the statistical significance of the GW and the EM events to claim a confident joint detection ? \textcolor{blue}{BOTTOM LINE RESULTS : We show that...}
  \end{abstract}
@@ -91,7 +90,7 @@ On September 2015, the two LIGO interferometers realized the first direct detect
 % As a transition towards the details of the EM emission we estimated the total GW emitted energy $E_{\mathrm{EM}}$ of the simulated BNS systems thanks to Bernuzzi et al. \cite{2016PhRvD..94b4023B}, ie.  $E_{GW} \sim 1.5 \% \, M c^{2}$ where M is the total mass of the binary.
 
 \indent We used a catalogue of Milky Way-like galaxies in which populations of $Z_{\astrosun}$ metallicity binary neutron stars (BNS) systems have been simulated thanks to the Synthetic Universe database \cite{syntheticUniverse}. To do this we injected artificial GW signals corresponding to the coalescence of the two compact objects into O2b anticipated detector noise.  We took the O2b period to last for 3 months with a duty cycle of $50 \, \%$. Finally, we try to recover these fake GW signals using matched-filtering techniques thanks to the BAYESTAR pipeline. \\
-\indent This detectability study echoes the one of Patricelli et al. \cite{2016arXiv160606124P} who used the \textsc{FERMI} instrument to monitor gamma-ray events.  As a sanity check we found the SNR, inclination and sky distribution of the events to be qualitatively consistent with both Patricelli et al. and Dominik et al. \textcolor{blue}{Add ref ?} results. \\
+\indent This detectability study echoes the one of Patricelli et al. \cite{2016arXiv160606124P} who used the \textsc{FERMI} instrument to monitor gamma-ray events.  As a sanity check we found the SNR, inclination and sky distribution of the events to be qualitatively consistent with both Patricelli et al. and Dominik et al. \cite{2012ApJ...759...52D} results. \\
 
 
 \section*{INTEGRAL and the EM emission.}
@@ -105,35 +104,52 @@ On September 2015, the two LIGO interferometers realized the first direct detect
 
 \begin{center}\vspace{.5cm}
     \includegraphics[scale=1.4]{figures/spectra.png}
-    \captionof{figure}{\vs{units are incompatible with a realistic model. also specify the model} Prompt and afterglow emission spectra from SGRBs systems. Flux have been normalized \vs{normalized to what?} with respect to INTEGRAL/SPI-ACS finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. }
+    \captionof{figure}{Prompt and afterglow emission spectra from SGRBs systems. Fluxes have been normalized with respect to the INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$.}
     \label{spectra}
 \end{center}
 
 \subsection*{Prompt emission.}
 
-The prompt emission is well modelled by the BAND emission spectrum with the following fixed parameters $\alpha_{\mathrm{BAND}} = - 0.5$, $\beta_{\mathrm{BAND}} = - 2.25$ and $E_{\mathrm{peak}} = 800 \, MeV$. As it is associated to the coalescence of the BNS it is not expected to last more than a few seconds. In other word, the default observation strategy is a passive follow-up. Hence, it is all the more important to monitor these events with a large FoV instrument. Choosing an isotropic sky distribution of our GW events, we show that INTEGRAL detects 55 \% of the events with a $20 \, \sigma$-significance for faint event and 10 \% of the events with a $30 \, \sigma$-significance for loud events if the ALIGO/Advanced Virgo network is considered. \textcolor{blue}{show fig (2)} \\
-\indent We also show is exists a sky region complementarity between the two onboard instruments. Indeed, one has an excellent FoV whereas the other has a better resolution. That is why we achieve with a better sensitivity combining the two. \textcolor{blue}{show fig (1)}.
+The prompt emission is well modelled by the BAND emission spectrum with the following fixed parameters $\alpha_{\mathrm{BAND}} = - 0.5$, $\beta_{\mathrm{BAND}} = - 2.25$ and $E_{\mathrm{peak}} = 800 \, MeV$. As it is associated to the coalescence of the BNS it is not expected to last more than a few seconds. In other word, the default observation strategy is a passive follow-up. Hence, it is all the more important to monitor these events with a large FoV instrument. Choosing an isotropic sky distribution of our GW events, we show that INTEGRAL detects 55 \% of the events with a $20 \, \sigma$-significance for faint event and 10 \% of the events with a $30 \, \sigma$-significance for loud events if the ALIGO/Advanced Virgo network is considered.
+
+\begin{center}\vspace{.5cm}
+    \includegraphics[scale=1.]{figures/test.png}\includegraphics[scale=1.]{figures/test.png}
+    \captionof{figure}{toto}
+    \label{spectra}
+\end{center}
+
+\textcolor{blue}{show fig (2)} \\
+ 
+\indent We also show is exists a sky region complementarity between the two onboard instruments. Indeed, one has an excellent FoV whereas the other has a better resolution. That is why we achieve with a better sensitivity combining the two. 
+
+\begin{center}\vspace{.5cm}
+    \includegraphics[scale=1.]{figures/test.png}
+    \captionof{figure}{toto}
+    \label{spectra}
+\end{center}
+
+\textcolor{blue}{show fig (1)}.
 
 
 \subsection*{Afterglow emission.}
 
-\begin{center}\vspace{.5cm}
-    \includegraphics[scale=1.4]{figures/covered_region.png}
-    \captionof{figure}{Cumulative distribution of the fraction of the LIGO/Virgo localization region accessible to INTEGRAL pointed follow-up observation in the LIGO/Virgo O2 run.}
-    \label{covered_region}
-\end{center}
-
 % Power law model see Eq(1) of 'THE FERMI GBM GAMMA-RAY BURST SPECTRAL CATALOG: FOUR YEARS OF DATA' - Gruber et al 
 
-As well the afterglow emission in the X-ray lasts until 3 days after the coalescence of the BNS system and is modelled by a cut-off power law with $\lambda = - 0.5$ and $E_{\mathrm{peak}} = 600 \, keV$. As stated before the X-ray emission we investigate occurs until few days or weeks after the prompt emission. It thus enable us to re-point the INTEGRAL satellite and to align the IBIS instrument onto the source. The observation strategy is then conditioned by two factors. The first one is the error-box area covered by INTEGRAL at the prompt emission time. We decide from the right figure ?? we can trigger a follow-up if more than 30 \% of the error box is initially covered. \textcolor{blue}{show fig (2)} \\
+As well the afterglow emission in the X-ray lasts until 3 days after the coalescence of the BNS system and is modelled by a cut-off power law with $\lambda = - 0.5$ and $E_{\mathrm{peak}} = 600 \, keV$. As stated before the X-ray emission we investigate occurs until few days or weeks after the prompt emission. It thus enable us to re-point the INTEGRAL satellite and to align the IBIS instrument onto the source. The observation strategy is then conditioned by two factors. The first one is the error-box area covered by INTEGRAL at the prompt emission time. We decide from the right figure ?? we can trigger a follow-up if more than 30 \% of the error box is initially covered.
+
+\begin{center}\vspace{.5cm}
+    \includegraphics[scale=1.]{figures/test.png}
+    \captionof{figure}{toto}
+    \label{spectra}
+\end{center}
+
+ \textcolor{blue}{show fig (2)} \\
 The left figure brings an answer to the second question : what is the duration limit after the prompt emission within which we are able to detect the SGRB source ? 
 
-%\begin{center}\vspace{.5cm}
-%    \includegraphics[height=20cm]{figures/test.png}
-%    \captionof{figure}{test}
-%\end{center}
+\section*{Conclusion.}
 
-\cite{*}
+Among compact objects populations GRBs are the most promising astrophysical sources from which we can expect a gamma-ray emission loud enough to be associated to GW radiation sources and thus be detectable with adequate instruments. We show in this poster that INTEGRAL is the appropriate to ensure a follow-up for both the prompt and afterglow emissions, thanks to the IBIS and SPI-ACES instruments. \textcolor{blue}{More quantitative data}
+
 
 %----------------------------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS
@@ -143,15 +159,16 @@ The left figure brings an answer to the second question : what is the duration l
 \noindent {\normalsize \textbf{Acknowledgements}}
 
 {\footnotesize 
-  We thank ASTERICS. Barbara Patricelli for sharing data, Philippe Laurent for discussions}
+  This research was supported in part by the ASTERICS grant. The authors would like to thank Barbara Patricelli for sharing data and Philippe Laurent for fruitful discussions. }
+  %We thank ASTERICS. Barbara Patricelli for sharing data, Philippe Laurent for discussions}
 
 %----------------------------------------------------------------------------------------
 %	REFERENCES
 %----------------------------------------------------------------------------------------
 
 %\nocite{*} % Print all references regardless of whether they were cited in the poster or not
-\bibliographystyle{plain} % Plain referencing style
-\bibliography{reference_phil} % Use the example bibliography file sample.bib
+%\bibliographystyle{plain} % Plain referencing style
+%\bibliography{reference_phil} % Use the example bibliography file sample.bib
 
 %----------------------------------------------------------------------------------------
 
