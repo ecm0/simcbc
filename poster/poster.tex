@@ -106,24 +106,35 @@
 
 \ECM{Intro on LIGO Virgo -- Objective of the study and major steps.}
 
+\emph{We produce a end-to-end simulation of the search for gravitational-waves
+from binary neutron star mergers \textit{and} follow-up observation seeking a
+ possible electromagnetic counterpart at high-energies.} This study is similar
+to the one done in \cite{2016arXiv160606124P} with Fermi.
+
 \section*{Monte-Carlo simulation of gravitational-wave events from neutron-star binary mergers}
 
-\ECM{Tell the number of sources, how they are distributed, summary plot?}
+We start with a simulated catalogue of 6 millions Milky Way-like galaxies
+distributed to $z\sim 0.12$. To those galaxies, we associate binary neutron star
+(BNS) mergers with mass distribution and rate of R=$23.5 M\mathrm{yr}^-3$ per galaxy
+according to Model A ($Z_{\astrosun}$ metallicity) of
+\cite{dominik12:_doubl_compac_objec}. This results in a population of 14\,000
+mergers for a $100$ year simulation.
 
-We used a catalogue of Milky Way-like galaxies in which populations of
-$Z_{\astrosun}$ metallicity binary neutron stars (BNS) systems have been
-simulated thanks to the Synthetic Universe database
-\cite{dominik12:_doubl_compac_objec}. 
+\begin{center}\vspace{.5cm}
+    \includegraphics[width=30cm]{figures/summary_plot.png}
+\end{center}
 
-To do this we injected artificial GW signals corresponding to the coalescence of
-the two compact objects into O2b anticipated detector noise.  We took the O2b
-period to last for 3 months with a duty cycle of $50 \, \%$.
+We inject GW signals corresponding to the binary mergers (using model
+``TaylorT4'') and inject them into Gaussian noise colored according to the
+``optimistic'' power-spectral density anticipated for the 2nd LIGO/Virgo run O2
+\cite{lrr-2016-1}. We select signals with $\mathrm{SNR}_{\mathrm{combined}} > 9$
+corresponding to a false-alarm rate $\mathrm{FAR} < 1/\mathrm{month}$. The average range
+BNS is 126 Mpc for this selection.
 
-Finally, we try to recover these fake GW signals using matched-filtering
-techniques thanks to the BAYESTAR pipeline \cite{PhysRevD.93.024013}.
-
-As a sanity check we found the SNR, inclination and sky distribution of the
-events to be qualitatively consistent with \cite{2016arXiv160606124P}.
+The resulting 232 binaries are distributed randomly in time during the expected
+period of O2 from Nov 2016 to May 2017 (6 months). We recover GW signals using
+matched-filtering techniques and reconstruct the posterior skymaps giving the
+position of the source with the BAYESTAR pipeline \cite{PhysRevD.93.024013}.
 
 % SNR threshold HL = 6 : RHO_thres_NETWORK = sqrt(rho_H**2 + rho_L**2) = 6
 % On one hand, the signal only takes the inspiral phase into account via the use of non-spinning waveform 'TaylorF4ThreePN'.
@@ -182,7 +193,7 @@ source (active follow-up).
 % As GRBs will then be monitored thanks to the SPI-ACS and IBIS instruments embarked on the \textsc{INTEGRAL} satellite mission, we thus have to convert the energy information into some constraints acting on the detectable energy flux by those instruments. The emitted EM flux is hence truncated to the \textsc{INTEGRAL} finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. \\
 
 \begin{center}
-    \includegraphics[width=]{figures/INTEGRAL.png}
+    \includegraphics[width=10cm]{figures/INTEGRAL.png}
 \end{center}
 
 
@@ -191,7 +202,7 @@ source (active follow-up).
 \subsection*{Prompt -- Passive follow-up}
 
 \begin{center}\vspace{.5cm}
-    \includegraphics[scale=1.4]{figures/covered_region.png}
+    \includegraphics[width=20cm]{figures/covered_region.png}
     \captionof{figure}{Cumulative distribution of the fraction of the LIGO/Virgo localization region accessible to INTEGRAL pointed follow-up observation in the LIGO/Virgo O2 run.}
     \label{covered_region}
 \end{center}
