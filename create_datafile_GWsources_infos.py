@@ -15,6 +15,10 @@ from glue.ligolw import lsctables
 
 from lalinference.bayestar import ligolw as ligolw_bayestar
 
+import numpy as np
+import healpy as hp
+from lalinference import fits
+
 file1 = sys.argv[1]
 (path1, filename1) = os.path.split(file1)
 
@@ -34,7 +38,7 @@ coinc_inspiral_table = ligolw_table.get_table(xmldoc2,
                                               lsctables.CoincInspiralTable.tableName)
 
 # Store infos in a .dat file.                                                                 
-with open('summary.txt', 'a') as file :
+with open('summary.txt', 'w') as file :
 
     print >> file, "# GPS date mass1 mass2 dist SNR RA dec inclination skymap Egw"
     #print "# GPS mass1 mass2 dist SNR RA dec inclination"                                                                                 
@@ -56,9 +60,32 @@ with open('summary.txt', 'a') as file :
         
         # Compute Egw - Take BNS Egw estimation from "How loud are neutron star mergers ?" - S. Bernuzzi et al. (2016)
         Egw = 1.5e-2 * (sim_inspiral.mass1 + sim_inspiral.mass2) * LAL_MSUN_SI * (LAL_C_SI**2) * 1e7 # in erg
-        
+
+        # Compute search area
+        skymap_filename = "{}/{}.toa_phoa_snr.fits.gz".format(path1,event_id[-1])
+
+        skymap, metadata = fits.read_sky_map(skymap_filename, nest=None)
+        nside = hp.npix2nside(len(skymap))
+
+        # Convert sky map from probability to probability per square degree.
+        probperdeg2 = skymap / hp.nside2pixarea(nside, degrees=True)
+        deg2=hp.nside2pixarea(nside, degrees=True)
+
+        indices = np.argsort(-skymap)
+        region = np.empty(skymap.shape)
+        region[indices] = 100 * np.cumsum(skymap[indices])
+        mylist=region[indices]
+
+        # Compute search areas
+        area90 = area50 = 0.0
+        for pix_prob in mylist:
+            if pix_prob < 90.0:
+                area90 += deg2
+            if pix_prob < 50.0:
+                area50 += deg2
+    
         # Store data in output file.
-        current_infos =  '{gps};"{date}";{mass1};{mass2};{dist};{snr};{RA};{dec};{inclination};{skymap};{egw}'.format(gps=end_time,
+        current_infos =  '{gps};"{date}";{mass1};{mass2};{dist};{snr};{RA};{dec};{inclination};{skymap};{egw};{area90};{area50}'.format(gps=end_time,
                                                                                                                       date=lal.gpstime.gps_to_utc(end_time).isoformat(' '),
                                                                                                                       mass1=sim_inspiral.mass1,
                                                                                                                       mass2=sim_inspiral.mass2,
@@ -66,8 +93,9 @@ with open('summary.txt', 'a') as file :
                                                                                                                       snr=coinc.snr,
                                                                                                                       RA=RA,
                                                                                                                       dec=dec,
-                                                                                                                      inclination=sim_inspiral.inclination,                      
-                                                                                                                      skymap="{}/{}.toa_phoa_snr.fits.gz".format(path1,event_id[-1]),
-                                                                                                                      egw=Egw)
-
+                                                                                                                      inclination=sim_inspiral.inclination,
+                                                                                                                      skymap=skymap_filename,
+                                                                                                                      egw=Egw,
+                                                                                                                      area90=area90,
+                                                                                                                      area50=area50)
         print >> file, current_infos
