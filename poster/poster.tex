@@ -185,19 +185,39 @@ for all synthetic GRB, $\alpha_{\mathrm{BAND}} = - 0.5$,
 $E_{\mathrm{peak}} = 600 \, keV$, close to the average short GRB
 spectrum observed by Fermi/GBM \citep{gruber14}. We also assume fixed
 duration of the prompt emission of 1 second and fixed isotropic
-equivalent luminosity of $10^{50}~erg~cm^{-2}~s^{-1}$.
+equivalent luminosity of $10^{50}~$erg~cm$^{-2}$~s$^{-1}$.
 
+The principal source of uncertainty on rate of GRB detections
+associated with the BNS mergers is the beaming factor of the prompt
+emission. We assume fixed beaming angle of 10 degrees. This angle is
+roughly compatible with the observations of the total short GRB rate
+inferred from our BNS population.
 
 \subsection*{Afterglow}
 
-After the ejecta has been slowed down, the beamed emission tends to
-open up as it looses energy. Contrary to the prompt emission the
-afterglow lasts from several days to several weeks (in the radio
-domain) after the coalescence. 
+Hard X-ray afterglow is rarely observed. There are indications that it
+is be present only in the most luminous GRBs happening about once in
+few month, rarely happening in the field of view of INTEGRAL by
+chance, 2\% of the sky. Luminous GRB120711A was seen in INTEGRAL/ISGRI
+and JEM-X for about 8 hours \cite{martincarillo14}. The bright hard
+X-ray emission afterglow found to be related to the bright gamma-ray
+afterglow, observed by Fermi/LAT in the energy range above 100 MeV. In
+particular, it had the same spectrum, powerlaw with a slope of -2. It
+is not unreasonable to assume that hard X-ray afterglows are as common
+as gamma-ray, but observed much less frequently due to observational
+limitations. On the other hand, as soon as the hard X-ray afterglow is
+observed, INTEGRAL observation reveals very high SNR.
 
-\indent In our model we considered a follow-up occurring at late
-afterglow. In the absence of any beaming the emission is taken to be
-isotropic.
+In our simulation we assume that every BNS merger is producing a hard
+X-ray afterglow, similar to that of GRB120711A, but rescaled to the
+total EM luminosity of a typical short GRB -
+$10^{50}~$erg$^{-2}~$s$^{-1}$. In most of the cases the outflow is not
+aligned with the line of sight. To compute the afterglow light curve
+as seen off-axis, we assume that the emission is originating in a
+single small relativistically moving region, deccelerating from
+initial $\Gamma_0$=200 on decceleration time scale 100~s (see Model~I
+in \citep{xxx}).
+
 
 % Power law model see Eq(1) of 'THE FERMI GBM GAMMA-RAY BURST SPECTRAL CATALOG: FOUR YEARS OF DATA' - Gruber et al 
 
@@ -214,12 +234,12 @@ isotropic.
 %        http://www.cosmos.esa.int/web/integral/instruments-spi
 
 The INTEGRAL satellite carries a combination of pointing instruments,
-covering wide energy range from 3 keV to 10 MeV with fields of view up
-to 900 deg$^2$. In addition, INTEGRAL/SPI-ACS and IBIS are capable of
-detecting bright transients from every sky direction.
+covering wide energy range from 3 keV to 10 MeV (ISGRI, PICsIT, JEM-X,
+and SPI) with field of view up to 900 deg$^2$. In addition,
+INTEGRAL/SPI-ACS and IBIS are capable of detecting bright transients
+from every sky direction.
 
 % As GRBs will then be monitored thanks to the SPI-ACS and IBIS instruments embarked on the \textsc{INTEGRAL} satellite mission, we thus have to convert the energy information into some constraints acting on the detectable energy flux by those instruments. The emitted EM flux is hence truncated to the \textsc{INTEGRAL} finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. \\
-
 
 \section*{Results}
 
@@ -240,18 +260,35 @@ LIGO events (\vs{SNR}) and 0.1 in 6 month in the case of loud events
 
 \subsection*{Afterglow -- Instrument repointing}
 
-As stated before the X-ray emission we investigate occurs until few
-days or weeks after the prompt emission. It thus enable us to re-point
-the INTEGRAL satellite and to align the IBIS instrument onto the
-source. The observation strategy is then conditioned by two
-factors. The first one is the error-box area covered by INTEGRAL at
-the prompt emission time. We decide from the right figure ?? we can
-trigger a follow-up if more than 30 \% of the error box is initially
+
+We assume that every event reported by LIGO will be followed by
+INTEGRAL pointing. Typical latency of INTEGRAL observation is about 1
+day but may be lower in some circumstances. We compute the flux at
+several moments of time, and compare it with sensivitiy of
+INTEGRAL/ISGRI in 100~ks observation.
+
+Due to observatonal constrains, only a fraction of the GW localization
+region can be observed by INTEGRAL. For each event we compute the
+total localization probability within the observable region, and find
+that in \vs{1\%} of the cases 99.7\% of the localization can be
+observed. However, if the complete availble region will be followed-up
+every time, in total 80\% of the true source locations will be
 covered.
+
+We find that the expected rate of 5~sigma detections is only about
+\vs{0.01} events in 6 month of O2. We explore also another
+possibility, that 10\% of the events launch much more energetic
+outflow, in agreement with luminosities observed in real short
+GRBs. In this case we expect about 0.1 events seen in 6 month. 
+
+We stress that the afterglow prediction is particularly sensitive to
+on assumptions on rather uncertain source model, and we assume only
+one, yet realistic, option.
 
 \begin{center}\vspace{.5cm}
     \includegraphics[width=20cm]{figures/significance_vs_rate_af.png}
-    \captionof{figure}{Significance distribution on detected sources depending on time delay after the prompt emission.}
+    \captionof{figure}{Significance distribution on detected sources
+      depending on time delay after the prompt emission.}
     \label{covered_region}
 \end{center}
 
