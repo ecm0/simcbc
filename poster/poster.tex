@@ -140,7 +140,9 @@ BNS is 126 Mpc for this selection.
 The resulting 232 binaries are distributed randomly in time during the expected
 period of O2 from Nov 2016 to May 2017 (6 months). We recover GW signals using
 matched-filtering techniques and reconstruct the posterior skymaps giving the
-position of the source with the BAYESTAR pipeline \cite{PhysRevD.93.024013}.
+position of the source using the BAYESTAR pipeline \cite{PhysRevD.93.024013}.
+With two detectors only, the position uncertainty is large and contained in a
+window of 700--2000 square degrees.
 
 % SNR threshold HL = 6 : RHO_thres_NETWORK = sqrt(rho_H**2 + rho_L**2) = 6
 % On one hand, the signal only takes the inspiral phase into account via the use of non-spinning waveform 'TaylorF4ThreePN'.
@@ -150,11 +152,11 @@ position of the source with the BAYESTAR pipeline \cite{PhysRevD.93.024013}.
 \section*{Electromagnetic emission model from neutron-star binary mergers}
 
 Compact binary mergers involving at least one neutron star are considered to be
-plausible progenitors of short gamma-ray bursts (GRB). Short GRBs constitute a
-subset of the whole GRB population with typical duration shorter than $\sim$2
-seconds. Short GRBs have also a harder spectrum.  Prompt emission is attributed
+plausible progenitors of short gamma-ray bursts (GRB). Short GRBs is a
+subset of the whole GRB population with duration shorter than $\sim$2
+seconds. Short GRBs have also a harder spectrum. \emph{Prompt emission} is attributed
 to dissipation within the collimated ultra-relativistic jet and is therefore
-strongly beamed. It is followed by slowly decaying afterglow, observed from
+strongly beamed. It is followed by \emph{slowly decaying afterglow}, observed from
 radio to GeV, produced by the interaction between the ejecta and the ambient
 medium surrounding the GRB progenitor. Afterglow emission is originally also
 strongly beamed, but as the outflow decelerates, the emission becomes
@@ -169,11 +171,13 @@ We model the prompt emission spectrum by a broken power-law, so-called the Band
 \cite{band93} model. For simplicity we assume the same prompt emission spectrum
 for all synthetic GRB, with $\alpha_{\mathrm{BAND}} = - 0.5$ and
 $E_{\mathrm{peak}} = 600$ \, keV, close to the average short GRB spectrum
-observed by Fermi/GBM \cite{gruber14}.  \ECM{Not clear: In the case of short
-  GRBs, the slope above the peak energy is not well constrained, and the
-  spectrum can be well described by a cutoff power-law. -- Would this be
-  correct?: Above the peak energy, the spectrum can be well described by a
-  cut-off power-law, although the slope is not well constrained.} We also assume
+observed by Fermi/GBM \cite{gruber14}.  
+%\ECM{Not clear: In the case of short
+%  GRBs, the slope above the peak energy is not well constrained, and the
+%  spectrum can be well described by a cutoff power-law. -- Would this be
+%  correct?: Above the peak energy, the spectrum can be well described by a
+%  cut-off power-law, although the slope is not well constrained.} 
+We also assume
 fixed duration of the prompt emission of 1 second and fixed isotropic equivalent
 luminosity of $10^{50}~$erg~cm$^{-2}$~s$^{-1}$.
 
@@ -199,19 +203,21 @@ energy range above 100 MeV. In particular, it had the same spectrum, powerlaw
 with a slope of -2.
 
 We assume a spectrum similar to GRB120711A, but rescaled to the total EM
-luminosity of a typical short GRB - $10^{50}~$erg$^{-2}~$s$^{-1}$. In most of
-the cases the outflow is not aligned with the line of sight. To compute the
-afterglow light curve as seen off-axis, we assume that the emission is
-originating in a single small relativistically moving region, decelerating from
-initial $\Gamma_0$=200 over a deceleration time scale 100~s (see Model~I in
-\cite{xxx}).
+luminosity of a typical short GRB - $10^{50}~$erg$^{-2}~$s$^{-1}$. We extrapolate
+this spectrum to the off-axis case using Model~I in \cite{xxx}.
+
+% In most of the cases the outflow is not aligned with the line of sight. To
+% compute the afterglow light curve as seen off-axis, we assume that the
+% emission is originating in a single small relativistically moving region,
+% decelerating from initial $\Gamma_0$=200 over a deceleration time scale 100~s
+% (see Model~I in \cite{xxx}).
 
 % Power law model see Eq(1) of 'THE FERMI GBM GAMMA-RAY BURST SPECTRAL CATALOG: FOUR YEARS OF DATA' - Gruber et al 
 
 \begin{center}
-    \includegraphics[height=10cm]{figures/spectra.png}
-    \includegraphics[height=10cm]{figures/INTEGRAL.jpg}
-    \captionof{figure}{(\textit{Left}) Prompt and afterglow emission spectra from SGRBs systems. Fluxes have been normalized with respect to the INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. (\textit{Right}) Instruments embarked on INTEGRAL satellite.}
+    \includegraphics[height=8cm]{figures/spectra.png}
+    \includegraphics[height=8cm]{figures/INTEGRAL.jpg}
+    \captionof{figure}{(\textit{Left}) Prompt and afterglow emission spectra of short GRBs. Fluxes have been normalized with respect to the INTEGRAL energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. (\textit{Right}) Instruments embarked on INTEGRAL satellite.}
     \label{spectra}
 \end{center}
 
@@ -260,6 +266,13 @@ region, and find that in \vs{1\%} of the cases 99.7\% of the localization can be
 observed. However, if the complete available region is followed up every
 time, in total 80\% of the true source locations are covered.
 
+\begin{center}
+  \includegraphics[height=8cm]{figures/significance_vs_rate_af.png}
+  \captionof{figure}{Significance distribution on detected sources
+    depending on time delay after the prompt emission}
+    \label{covered_region}
+\end{center}
+
 We find that the expected rate of 5~sigma detections is only about
 \vs{0.01} events in 6 month of O2. We explore also another
 possibility, that 10\% of the events launch much more energetic
@@ -270,16 +283,7 @@ We stress that the afterglow prediction is particularly sensitive to
 assumptions on rather uncertain source model, and we assume only
 one, yet realistic, option.
 
-\begin{center}\vspace{.5cm}
-  \includegraphics[width=10cm]{figures/significance_vs_rate_af.png}
-  \captionof{figure}{Significance distribution on detected sources
-    depending on time delay after the prompt emission.}
-    \label{covered_region}
-\end{center}
-
-The left figure brings an answer to the second question : what is the duration
-limit after the prompt emission within which we are able to detect the SGRB
-source ?
+\ECM{Conclusions here}
 
 % \section*{Conclusions}
 
@@ -306,9 +310,10 @@ source ?
 %	REFERENCES
 %----------------------------------------------------------------------------------------
 
-%\nocite{*} % Print all references regardless of whether they were cited in the poster or not
+{\tiny
 \bibliographystyle{plain} % Plain referencing style
 \bibliography{bib_other} % Use the example bibliography file sample.bib
+}
 
 %----------------------------------------------------------------------------------------
 
