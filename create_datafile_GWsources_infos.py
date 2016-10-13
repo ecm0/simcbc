@@ -39,7 +39,6 @@ coinc_inspiral_table = ligolw_table.get_table(xmldoc2,
                                               lsctables.CoincInspiralTable.tableName)
 
 print "# GPS date mass1 mass2 dist SNR RA dec inclination skymap Egw area90 area50"
-#print "# GPS mass1 mass2 dist SNR RA dec inclination"                                                                                 
 
 for coinc in coinc_inspiral_table:
     for sim_inspiral in sim_inspiral_table:
@@ -47,44 +46,43 @@ for coinc in coinc_inspiral_table:
                 break
             else:
                 sim_inspiral=None
+    if not sim_inspiral:
+        continue
 
-            if not sim_inspiral:
-                continue
-
- end_time = lal.LIGOTimeGPS(sim_inspiral.geocent_end_time, sim_inspiral.geocent_end_time_ns)
-(RA,dec) = sim_inspiral.ra_dec
- event_id = str(coinc.coinc_event_id)
+    end_time = lal.LIGOTimeGPS(sim_inspiral.geocent_end_time, sim_inspiral.geocent_end_time_ns)
+    (RA,dec) = sim_inspiral.ra_dec
+    event_id = str(coinc.coinc_event_id)
         
- # Compute Egw - Take BNS Egw estimation from "How loud are neutron star mergers ?" - S. Bernuzzi et al. (2016)
- Egw = 1.5e-2 * (sim_inspiral.mass1 + sim_inspiral.mass2) * LAL_MSUN_SI * (LAL_C_SI**2) * 1e7 # in erg
+    # Compute Egw - Take BNS Egw estimation from "How loud are neutron star mergers ?" - S. Bernuzzi et al. (2016)
+    Egw = 1.5e-2 * (sim_inspiral.mass1 + sim_inspiral.mass2) * LAL_MSUN_SI * (LAL_C_SI**2) * 1e7 # in erg
 
- # Compute search area
- skymap_filename = "{}/{}.toa_phoa_snr.fits.gz".format(path1,event_id[-1])
-
- skymap, metadata = fits.read_sky_map(skymap_filename, nest=None)
- nside = hp.npix2nside(len(skymap))
+    # Compute search area
+    skymap_filename = "{}/{}.toa_phoa_snr.fits.gz".format(path1,event_id[-1])
+    
+    skymap, metadata = fits.read_sky_map(skymap_filename, nest=None)
+    nside = hp.npix2nside(len(skymap))
  
- # Convert sky map from probability to probability per square degree.
- probperdeg2 = skymap / hp.nside2pixarea(nside, degrees=True)
- deg2=hp.nside2pixarea(nside, degrees=True)
+    # Convert sky map from probability to probability per square degree.
+    probperdeg2 = skymap / hp.nside2pixarea(nside, degrees=True)
+    deg2=hp.nside2pixarea(nside, degrees=True)
  
-indices = np.argsort(-skymap)
-region = np.empty(skymap.shape)
-region[indices] = 100 * np.cumsum(skymap[indices])
-mylist=region[indices]
+    indices = np.argsort(-skymap)
+    region = np.empty(skymap.shape)
+    region[indices] = 100 * np.cumsum(skymap[indices])
+    mylist=region[indices]
+ 
+    # Compute search areas
+    area90 = area50 = 0.0
+    for pix_prob in mylist:
+        if pix_prob < 90.0:
+            area90 += deg2
+        if pix_prob < 50.0:
+            area50 += deg2
 
-# Compute search areas
-area90 = area50 = 0.0
-for pix_prob in mylist:
-    if pix_prob < 90.0:
-        area90 += deg2
-    if pix_prob < 50.0:
-        area50 += deg2
+    date = lal.gpstime.gps_to_utc(end_time).isoformat(' ')
 
-lal.gpstime.gps_to_utc(end_time).isoformat(' ')
-
-info_string = '{gps};"{date}";{mass1};{mass2};{dist};{snr};{RA};{dec};{inclination};{skymap};{egw};{area90};{area50}'
-current_infos =  string.format( gps=end_time,
+    info_string = '{gps};"{date}";{mass1};{mass2};{dist};{snr};{RA};{dec};{inclination};{skymap};{egw};{area90};{area50}'
+    infos =  info_string.format(gps=end_time,
                                 date=date,
                                 mass1=sim_inspiral.mass1,
                                 mass2=sim_inspiral.mass2,
@@ -97,4 +95,4 @@ current_infos =  string.format( gps=end_time,
                                 egw=Egw,
                                 area90=area90,
                                 area50=area50)
-print current_infos
+    print infos
