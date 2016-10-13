@@ -106,12 +106,16 @@
 
 \section*{Motivations}
 
-%\ECM{Intro on LIGO Virgo -- Objective of the study and major steps.}
-On September 2015, the two LIGO interferometers realized the first direct detection of gravitational waves (GW) and inaugurated a multi-messenger era in astronomy history. A next step would be to detect some electromagnetic (EM) counterparts associated to GW events during the second observing run (O2). Among them short gamma-ray bursts (SGRBs) produced by the coalescence of binary neutron stars are surely the most promising sources detectable by high energy detectors. We thus address the question of the joint detectability of GW events by Advanced Virgo and Advanced LIGO interferometers, and EM events with the INTEGRAL mission. \\
-\emph{We produce a end-to-end simulation of the search for gravitational-waves
-from binary neutron star mergers \textit{and} follow-up observation seeking a
- possible electromagnetic counterpart at high-energies.} This study is similar
-to the one done in \cite{2016arXiv160606124P} with Fermi.
+On Sep 14 2015, the two LIGO interferometers made the first direct detection of
+gravitational waves (GW). A next step would be to detect an electromagnetic (EM)
+counterpart associated to a GW event. This would inaugurate a new,
+multimessenger era in the astronomy history. We address the question of the
+joint detectability of GW events by Advanced Virgo and Advanced LIGO, and
+associated EM events at high-energies by the INTEGRAL mission. We produce an
+\emph{end-to-end simulation of the search for gravitational-waves from binary
+  neutron star mergers \textit{and} follow-up observation seeking a possible
+  electromagnetic counterpart at high-energies.} This study is similar to the
+one done in \cite{2016arXiv160606124P} with Fermi.
 
 \section*{Monte-Carlo simulation of gravitational-wave events from neutron-star binary mergers}
 
@@ -144,80 +148,63 @@ position of the source with the BAYESTAR pipeline \cite{PhysRevD.93.024013}.
 % As a transition towards the details of the EM emission we estimated the total GW emitted energy $E_{\mathrm{EM}}$ of the simulated BNS systems thanks to Bernuzzi et al. \cite{2016PhRvD..94b4023B}, ie.  $E_{GW} \sim 1.5 \% \, M c^{2}$ where M is the total mass of the binary.
 
 \section*{Electromagnetic emission model from neutron-star binary mergers}
+Compact binary mergers involving at least one neutron star are considered to be
+plausible progenitors of short gamma-ray bursts (GRB). Short GRBs constitute a
+subset of the whole GRB population with typical duration shorter than $\sim$2
+seconds. Short GRBs have also a harder spectrum.  Prompt emission is attributed
+to dissipation within the collimated ultra-relativistic jet and is therefore
+strongly beamed. It is followed by slowly decaying afterglow, observed from
+radio to GeV, produced by the interaction between the ejecta and the ambient
+medium surrounding the GRB progenitor. Afterglow emission is originally also
+strongly beamed, but as the outflow decelerates, the emission becomes
+progressively more isotropic.
 
-As the material from the two neutron stars collide, tremendous amount
-of energy implied in the process accelerate the matter. For this
-reason compact binary mergers involving at least one neutron star are
-considered to be a candidate to the progentiors of short gamma-ray
-bursts.
-
- Short GRBs constitute a subset of the whole GRB population,
- distinguished from the long GRBs by duration of their initial bright
- burst emission, with the threshold duration usually assumed to be 2
- seconds. Short GRBs are also harder then long, reveal different
- spectral lags, and are located in different galaxies and sites in the
- galaxies.
-
-Bright prompt emission, primarily in gamma-ray and X-ray domain, is
-attributed to dissipation within the collimated ultra-relativistic
-outflow. Prompt emission is strongly beamed. It is followed by slowly
-decaying afterglow, observed from radio to GeV, produced in the
-interaction between the ejecta and the ambient medium surrounding the
-GRB progenitor. Afterglow emission is originally also strongly beamed,
-but as the outflow deccelerates, the emission becomes progressively
-more isotropic.
-
-In our simulation we assume that every BNS merger is associated with a
-short gamma-ray burst. We simulate synthetic prompt GRB and a hard
-X-ray afterglow, assuming simplified model, as described in the
-following sections.
+\emph{In our simulation we assume that every BNS merger is associated with a short
+gamma-ray burst. We simulate synthetic prompt GRB and a hard X-ray afterglow,
+assuming the following simplified model.}
 
 \subsection*{Prompt emission}
-
-%\ECM{Tell: light curve evolution, isotropic emitted energy and beaming}
-
-The prompt emission spectrum of GRBs is usually modelled by smoothly
-broken powerlaw, so-called the Band \citep{band93} model. In the case
-of short GRBs, the slope above the peak energy is not well
-constrained, and the spectrum can be well-described by a cutoff
-powerlaw. For simplicity we assume the same prompt emission spectrum
-for all synthetic GRB, $\alpha_{\mathrm{BAND}} = - 0.5$,
-$E_{\mathrm{peak}} = 600 \, keV$, close to the average short GRB
-spectrum observed by Fermi/GBM \citep{gruber14}. We also assume fixed
-duration of the prompt emission of 1 second and fixed isotropic
-equivalent luminosity of $10^{50}~$erg~cm$^{-2}$~s$^{-1}$.
+We model the prompt emission spectrum by a broken power-law, so-called the Band
+\cite{band93} model. For simplicity we assume the same prompt emission spectrum
+for all synthetic GRB, with $\alpha_{\mathrm{BAND}} = - 0.5$ and $E_{\mathrm{peak}} =
+600$ \, keV, close to the average short GRB spectrum observed by Fermi/GBM
+\cite{gruber14}.  \ECM{Not clear: In the case of short GRBs, the slope above the
+  peak energy is not well constrained, and the spectrum can be well described by
+  a cutoff power-law. -- Would this be correct?: Above the peak energy, the
+  spectrum can be well described by a cut-off power-law, although the slope is
+  not well constrained.} We also assume fixed duration of the prompt emission of
+1 second and fixed isotropic equivalent luminosity of
+$10^{50}~$erg~cm$^{-2}$~s$^{-1}$.
 
 The principal source of uncertainty on rate of GRB detections
 associated with the BNS mergers is the beaming factor of the prompt
-emission. We assume fixed beaming angle of 10 degrees. This angle is
+emission. We assume a fixed beaming angle of 10 degrees. This angle is
 roughly compatible with the observations of the total short GRB rate
 inferred from our BNS population.
 
-\subsection*{Afterglow}
+\subsection*{Hard X-ray afterglows}
 
-Hard X-ray afterglow is rarely observed. There are indications that it
-is be present only in the most luminous GRBs happening about once in
-few month, rarely happening in the field of view of INTEGRAL by
-chance, 2\% of the sky. Luminous GRB120711A was seen in INTEGRAL/ISGRI
-and JEM-X for about 8 hours \cite{martincarillo14}. The bright hard
-X-ray emission afterglow found to be related to the bright gamma-ray
-afterglow, observed by Fermi/LAT in the energy range above 100 MeV. In
-particular, it had the same spectrum, powerlaw with a slope of -2. It
-is not unreasonable to assume that hard X-ray afterglows are as common
-as gamma-ray, but observed much less frequently due to observational
-limitations. On the other hand, as soon as the hard X-ray afterglow is
-observed, INTEGRAL observation reveals very high SNR.
+We assume that every BNS merger produces a hard X-ray afterglow. Although
+afterglows in the hard X-rays are rarely observed, it is not unreasonable to
+assume that they are as frequent as gamma-rays, but observed much less
+frequently due to observational limitations.
 
-In our simulation we assume that every BNS merger is producing a hard
-X-ray afterglow, similar to that of GRB120711A, but rescaled to the
-total EM luminosity of a typical short GRB -
-$10^{50}~$erg$^{-2}~$s$^{-1}$. In most of the cases the outflow is not
-aligned with the line of sight. To compute the afterglow light curve
-as seen off-axis, we assume that the emission is originating in a
-single small relativistically moving region, deccelerating from
-initial $\Gamma_0$=200 on decceleration time scale 100~s (see Model~I
-in \citep{xxx}).
+There are indications that such afterglows are present in the most luminous GRBs
+occuring about once in few months (2\% of the sky observed by INTEGRAL).  When
+hard X-ray afterglows are observed, INTEGRAL observations reveals very high
+SNR. For instance, GRB120711A was seen in INTEGRAL/ISGRI and JEM-X for about 8
+hours \cite{martincarillo14}. The bright hard X-ray emission afterglow found to
+be related to the bright gamma-ray afterglow, observed by Fermi/LAT in the
+energy range above 100 MeV. In particular, it had the same spectrum, powerlaw
+with a slope of -2.
 
+We assume a spectrum similar to GRB120711A, but rescaled to the total EM
+luminosity of a typical short GRB - $10^{50}~$erg$^{-2}~$s$^{-1}$. In most of
+the cases the outflow is not aligned with the line of sight. To compute the
+afterglow light curve as seen off-axis, we assume that the emission is
+originating in a single small relativistically moving region, decelerating from
+initial $\Gamma_0$=200 over a deceleration time scale 100~s (see Model~I in
+\cite{xxx}).
 
 % Power law model see Eq(1) of 'THE FERMI GBM GAMMA-RAY BURST SPECTRAL CATALOG: FOUR YEARS OF DATA' - Gruber et al 
 
@@ -246,7 +233,9 @@ from every sky direction.
 \subsection*{Prompt -- Passive follow-up}
 
 \begin{center}\vspace{.5cm}
-    \includegraphics[scale=.6]{figures/covered_region.png}\includegraphics[scale=.45]{figures/fluence_distribution_12_pe.png}\includegraphics[scale=.37]{figures/sensitivity_distribution_pe.png}
+    \includegraphics[scale=.6]{figures/covered_region.png}
+    %\includegraphics[scale=.45]{figures/fluence_distribution_12_pe.png}
+    %\includegraphics[scale=.37]{figures/sensitivity_distribution_pe.png}
     \captionof{figure}{(\textit{Left}) Cumulative distribution of the fraction of the LIGO/Virgo localization region accessible to INTEGRAL pointed follow-up observation in the LIGO/Virgo O2 run. (\textit{Middle}) Cumulative distribution of the detected fluences by INTEGRAL in the LIGO/Virgo O2 run.(\textit{Right}) Cumulative distribution of the sensitivity of the IBIS and SPI-ACS instruments.}
     \label{covered_region}
 \end{center}
@@ -259,7 +248,6 @@ LIGO events (\vs{SNR}) and 0.1 in 6 month in the case of loud events
 (\vs{SNR}).
 
 \subsection*{Afterglow -- Instrument repointing}
-
 
 We assume that every event reported by LIGO will be followed by
 INTEGRAL pointing. Typical latency of INTEGRAL observation is about 1
@@ -286,7 +274,7 @@ on assumptions on rather uncertain source model, and we assume only
 one, yet realistic, option.
 
 \begin{center}\vspace{.5cm}
-    \includegraphics[width=20cm]{figures/significance_vs_rate_af.png}
+  %\includegraphics[width=20cm]{figures/significance_vs_rate_af.png}
     \captionof{figure}{Significance distribution on detected sources
       depending on time delay after the prompt emission.}
     \label{covered_region}
