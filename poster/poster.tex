@@ -21,7 +21,7 @@
 \documentclass[a0,portrait]{a0poster}
 
 \usepackage{subcaption} 
-
+\usepackage{natbib} % use citep
 \usepackage{ wasysym } % astrosun symbol.
 \usepackage{gensymb} % degree symbol
 \usepackage{multicol} % This is so we can have multiple columns of text side-by-side
@@ -108,9 +108,9 @@
 
 %\ECM{Intro on LIGO Virgo -- Objective of the study and major steps.}
 On September 2015, the two LIGO interferometers realized the first direct detection of gravitational waves (GW) and inaugurated a multi-messenger era in astronomy history. A next step would be to detect some electromagnetic (EM) counterparts associated to GW events during the second observing run (O2). Among them short gamma-ray bursts (SGRBs) produced by the coalescence of binary neutron stars are surely the most promising sources detectable by high energy detectors. We thus address the question of the joint detectability of GW events by Advanced Virgo and Advanced LIGO interferometers, and EM events with the INTEGRAL mission. \\
-\emph{We produce a end-to-end simulation of the search for gravitational-waves
+We produce a end-to-end simulation of the search for gravitational-waves
 from binary neutron star mergers \textit{and} follow-up observation seeking a
- possible electromagnetic counterpart at high-energies.} This study is similar
+ possible electromagnetic counterpart at high-energies. This study is similar
 to the one done in \cite{2016arXiv160606124P} with Fermi.
 
 \section*{Monte-Carlo simulation of gravitational-wave events from neutron-star binary mergers}
@@ -148,7 +148,7 @@ position of the source with the BAYESTAR pipeline \cite{PhysRevD.93.024013}.
 As the material from the two neutron stars collide, tremendous amount
 of energy implied in the process accelerate the matter. For this
 reason compact binary mergers involving at least one neutron star are
-considered to be a candidate to the progentiors of short gamma-ray
+considered to be a candidate to the progenitors of short gamma-ray
 bursts.
 
  Short GRBs constitute a subset of the whole GRB population,
@@ -164,7 +164,7 @@ outflow. Prompt emission is strongly beamed. It is followed by slowly
 decaying afterglow, observed from radio to GeV, produced in the
 interaction between the ejecta and the ambient medium surrounding the
 GRB progenitor. Afterglow emission is originally also strongly beamed,
-but as the outflow deccelerates, the emission becomes progressively
+but as the outflow decelerates, the emission becomes progressively
 more isotropic.
 
 In our simulation we assume that every BNS merger is associated with a
@@ -177,10 +177,10 @@ following sections.
 %\ECM{Tell: light curve evolution, isotropic emitted energy and beaming}
 
 The prompt emission spectrum of GRBs is usually modelled by smoothly
-broken powerlaw, so-called the Band \citep{band93} model. In the case
+broken power law, so-called the Band \citep{band93} model. In the case
 of short GRBs, the slope above the peak energy is not well
-constrained, and the spectrum can be well-described by a cutoff
-powerlaw. For simplicity we assume the same prompt emission spectrum
+constrained, and the spectrum can be well-described by a cut-off
+power law. For simplicity we assume the same prompt emission spectrum
 for all synthetic GRB, $\alpha_{\mathrm{BAND}} = - 0.5$,
 $E_{\mathrm{peak}} = 600 \, keV$, close to the average short GRB
 spectrum observed by Fermi/GBM \citep{gruber14}. We also assume fixed
@@ -214,16 +214,16 @@ total EM luminosity of a typical short GRB -
 $10^{50}~$erg$^{-2}~$s$^{-1}$. In most of the cases the outflow is not
 aligned with the line of sight. To compute the afterglow light curve
 as seen off-axis, we assume that the emission is originating in a
-single small relativistically moving region, deccelerating from
-initial $\Gamma_0$=200 on decceleration time scale 100~s (see Model~I
-in \citep{xxx}).
+single small relativistically moving region, decelerating from
+initial $\Gamma_0$=200 on deceleration time scale 100~s (see Model~I
+in \textcolor{blue}{??}%\citep{xxx}%).
 
 
 % Power law model see Eq(1) of 'THE FERMI GBM GAMMA-RAY BURST SPECTRAL CATALOG: FOUR YEARS OF DATA' - Gruber et al 
 
 \begin{center}\vspace{.5cm}
-    \includegraphics[width=20cm]{figures/spectra.png}\includegraphics[scale=.65]{figures/Integralinstru.jpg}
-    \captionof{figure}{(\textit{Left}) Prompt and afterglow emission spectra from SGRBs systems. Fluxes have been normalized with respect to the INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. (\textit{Right}) Instruments embarked on INTEGRAL satellite.} \vs{use ph/keV/cm2/s; describe models in the spectra (the plotted models are quite far from realistic )}
+    \includegraphics[width=20cm]{figures/spectra.png}\includegraphics[scale=.65]{figures/INTEGRAL.jpg}
+    \captionof{figure}{(\textit{Left}) Prompt and afterglow emission spectra from SGRBs systems. Fluxes have been normalized with respect to the INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. (\textit{Right}) Instruments embarked on INTEGRAL satellite.}
     \label{spectra}
 \end{center}
 
@@ -246,13 +246,13 @@ from every sky direction.
 \subsection*{Prompt -- Passive follow-up}
 
 \begin{center}\vspace{.5cm}
-    \includegraphics[scale=.6]{figures/covered_region.png}\includegraphics[scale=.45]{figures/fluence_distribution_12_pe.png}\includegraphics[scale=.37]{figures/sensitivity_distribution_pe.png}
+    \includegraphics[scale=.6]{figures/covered_region.png}\includegraphics[scale=.45]{figures/fluence_distribution_12.png}\includegraphics[scale=.37]{figures/sensitivity_distribution_pe.png}
     \captionof{figure}{(\textit{Left}) Cumulative distribution of the fraction of the LIGO/Virgo localization region accessible to INTEGRAL pointed follow-up observation in the LIGO/Virgo O2 run. (\textit{Middle}) Cumulative distribution of the detected fluences by INTEGRAL in the LIGO/Virgo O2 run.(\textit{Right}) Cumulative distribution of the sensitivity of the IBIS and SPI-ACS instruments.}
     \label{covered_region}
 \end{center}
 
 Choosing an isotropic sky distribution of our GW events, we show that
-in every case where the Earch is within the GRB emission cone,
+in every case where the Earth is within the GRB emission cone,
 INTEGRAL detects prompt emission with significance at least 50~sigma.
 The rate of detection is 0.5 in 6 month of O2 in the case of faint
 LIGO events (\vs{SNR}) and 0.1 in 6 month in the case of loud events
@@ -264,14 +264,14 @@ LIGO events (\vs{SNR}) and 0.1 in 6 month in the case of loud events
 We assume that every event reported by LIGO will be followed by
 INTEGRAL pointing. Typical latency of INTEGRAL observation is about 1
 day but may be lower in some circumstances. We compute the flux at
-several moments of time, and compare it with sensivitiy of
+several moments of time, and compare it with sensitivity of
 INTEGRAL/ISGRI in 100~ks observation.
 
-Due to observatonal constrains, only a fraction of the GW localization
+Due to observational constrains, only a fraction of the GW localization
 region can be observed by INTEGRAL. For each event we compute the
 total localization probability within the observable region, and find
 that in \vs{1\%} of the cases 99.7\% of the localization can be
-observed. However, if the complete availble region will be followed-up
+observed. However, if the complete available region will be followed-up
 every time, in total 80\% of the true source locations will be
 covered.
 
@@ -323,7 +323,7 @@ source ?
 
 %\nocite{*} % Print all references regardless of whether they were cited in the poster or not
 \bibliographystyle{plain} % Plain referencing style
-\bibliography{reference} % Use the example bibliography file sample.bib
+\bibliography{bib_other} % Use the example bibliography file sample.bib
 
 %----------------------------------------------------------------------------------------
 
