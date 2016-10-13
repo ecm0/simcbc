@@ -208,8 +208,9 @@ initial $\Gamma_0$=200 over a deceleration time scale 100~s (see Model~I in
 
 % Power law model see Eq(1) of 'THE FERMI GBM GAMMA-RAY BURST SPECTRAL CATALOG: FOUR YEARS OF DATA' - Gruber et al 
 
-\begin{center}\vspace{.5cm}
-    \includegraphics[width=20cm]{figures/spectra.png}\includegraphics[scale=.65]{figures/INTEGRAL.jpg}
+\begin{center}
+    \includegraphics[height=10cm]{figures/spectra.png}
+    \includegraphics[height=10cm]{figures/INTEGRAL.jpg}
     \captionof{figure}{(\textit{Left}) Prompt and afterglow emission spectra from SGRBs systems. Fluxes have been normalized with respect to the INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. (\textit{Right}) Instruments embarked on INTEGRAL satellite.}
     \label{spectra}
 \end{center}
@@ -220,10 +221,14 @@ initial $\Gamma_0$=200 over a deceleration time scale 100~s (see Model~I in
 % LINK : http://www.cosmos.esa.int/web/integral/instruments-ibis
 %        http://www.cosmos.esa.int/web/integral/instruments-spi
 
-The INTEGRAL satellite carries a combination of pointing instruments,
-covering wide energy range from 3 keV to 10 MeV (ISGRI, PICsIT, JEM-X,
-and SPI) with field of view up to 900 deg$^2$. In addition,
-INTEGRAL/SPI-ACS and IBIS are capable of detecting bright transients
+The INTEGRAL satellite carries a combination of pointing instruments, covering
+wide energy range from 3 keV to 10 MeV (ISGRI, PICsIT, JEM-X, and SPI) with
+field of view up to 900 deg$^2$. \emph{Active follow-up:} We assume that every
+GW alerts reported by LIGO/Virgo is followed by INTEGRAL pointings. Typical
+latency of INTEGRAL observation is about 1 day but may be lower in some
+circumstances. We compute the flux at several moments of time, and compare it
+with ISGRI sensitivity in 100~ks observation. \emph{Passive follow-up:} In
+addition, INTEGRAL/SPI-ACS and IBIS are capable of detecting bright transients
 from every sky direction.
 
 % As GRBs will then be monitored thanks to the SPI-ACS and IBIS instruments embarked on the \textsc{INTEGRAL} satellite mission, we thus have to convert the energy information into some constraints acting on the detectable energy flux by those instruments. The emitted EM flux is hence truncated to the \textsc{INTEGRAL} finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. \\
@@ -232,10 +237,10 @@ from every sky direction.
 
 \subsection*{Prompt -- Passive follow-up}
 
-\begin{center}\vspace{.5cm}
-    \includegraphics[scale=.6]{figures/covered_region.png}
-    \includegraphics[scale=.45]{figures/fluence_distribution_12.png}
-    \includegraphics[scale=.37]{figures/sensitivity_distribution_pe.png}
+\begin{center}
+    \includegraphics[height=8cm]{figures/covered_region.png}
+    \includegraphics[height=8cm]{figures/fluence_distribution_12.png}
+    \includegraphics[height=8cm]{figures/sensitivity_distribution_pe.png}
     \captionof{figure}{(\textit{Left}) Cumulative distribution of the fraction of the LIGO/Virgo localization region accessible to INTEGRAL pointed follow-up observation in the LIGO/Virgo O2 run. (\textit{Middle}) Cumulative distribution of the detected fluences by INTEGRAL in the LIGO/Virgo O2 run.(\textit{Right}) Cumulative distribution of the sensitivity of the IBIS and SPI-ACS instruments.}
     \label{covered_region}
 \end{center}
@@ -248,12 +253,6 @@ LIGO events (\vs{SNR}) and 0.1 in 6 month in the case of loud events
 (\vs{SNR}).
 
 \subsection*{Afterglow -- Instrument repointing}
-
-We assume that every event reported by LIGO will be followed by
-INTEGRAL pointing. Typical latency of INTEGRAL observation is about 1
-day but may be lower in some circumstances. We compute the flux at
-several moments of time, and compare it with sensitivity of
-INTEGRAL/ISGRI in 100~ks observation.
 
 Due to observational constrains, only a fraction of the GW localization
 region can be observed by INTEGRAL. For each event we compute the
@@ -274,7 +273,7 @@ on assumptions on rather uncertain source model, and we assume only
 one, yet realistic, option.
 
 \begin{center}\vspace{.5cm}
-  \includegraphics[width=20cm]{figures/significance_vs_rate_af.png}
+  \includegraphics[width=10cm]{figures/significance_vs_rate_af.png}
   \captionof{figure}{Significance distribution on detected sources
     depending on time delay after the prompt emission.}
     \label{covered_region}
