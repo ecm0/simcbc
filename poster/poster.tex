@@ -21,7 +21,7 @@
 \documentclass[a0,portrait]{a0poster}
 
 \usepackage{subcaption} 
-
+\usepackage{natbib} % use citep
 \usepackage{ wasysym } % astrosun symbol.
 \usepackage{gensymb} % degree symbol
 \usepackage{multicol} % This is so we can have multiple columns of text side-by-side
@@ -148,6 +148,7 @@ position of the source with the BAYESTAR pipeline \cite{PhysRevD.93.024013}.
 % As a transition towards the details of the EM emission we estimated the total GW emitted energy $E_{\mathrm{EM}}$ of the simulated BNS systems thanks to Bernuzzi et al. \cite{2016PhRvD..94b4023B}, ie.  $E_{GW} \sim 1.5 \% \, M c^{2}$ where M is the total mass of the binary.
 
 \section*{Electromagnetic emission model from neutron-star binary mergers}
+
 Compact binary mergers involving at least one neutron star are considered to be
 plausible progenitors of short gamma-ray bursts (GRB). Short GRBs constitute a
 subset of the whole GRB population with typical duration shorter than $\sim$2
@@ -166,21 +167,20 @@ assuming the following simplified model.}
 \subsection*{Prompt emission}
 We model the prompt emission spectrum by a broken power-law, so-called the Band
 \cite{band93} model. For simplicity we assume the same prompt emission spectrum
-for all synthetic GRB, with $\alpha_{\mathrm{BAND}} = - 0.5$ and $E_{\mathrm{peak}} =
-600$ \, keV, close to the average short GRB spectrum observed by Fermi/GBM
-\cite{gruber14}.  \ECM{Not clear: In the case of short GRBs, the slope above the
-  peak energy is not well constrained, and the spectrum can be well described by
-  a cutoff power-law. -- Would this be correct?: Above the peak energy, the
-  spectrum can be well described by a cut-off power-law, although the slope is
-  not well constrained.} We also assume fixed duration of the prompt emission of
-1 second and fixed isotropic equivalent luminosity of
-$10^{50}~$erg~cm$^{-2}$~s$^{-1}$.
+for all synthetic GRB, with $\alpha_{\mathrm{BAND}} = - 0.5$ and
+$E_{\mathrm{peak}} = 600$ \, keV, close to the average short GRB spectrum
+observed by Fermi/GBM \cite{gruber14}.  \ECM{Not clear: In the case of short
+  GRBs, the slope above the peak energy is not well constrained, and the
+  spectrum can be well described by a cutoff power-law. -- Would this be
+  correct?: Above the peak energy, the spectrum can be well described by a
+  cut-off power-law, although the slope is not well constrained.} We also assume
+fixed duration of the prompt emission of 1 second and fixed isotropic equivalent
+luminosity of $10^{50}~$erg~cm$^{-2}$~s$^{-1}$.
 
-The principal source of uncertainty on rate of GRB detections
-associated with the BNS mergers is the beaming factor of the prompt
-emission. We assume a fixed beaming angle of 10 degrees. This angle is
-roughly compatible with the observations of the total short GRB rate
-inferred from our BNS population.
+The principal source of uncertainty on rate of GRB detections associated with
+the BNS mergers is the beaming factor of the prompt emission. We assume a fixed
+beaming angle of 10 degrees. This angle is roughly compatible with the
+observations of the total short GRB rate inferred from our BNS population.
 
 \subsection*{Hard X-ray afterglows}
 
@@ -209,8 +209,8 @@ initial $\Gamma_0$=200 over a deceleration time scale 100~s (see Model~I in
 % Power law model see Eq(1) of 'THE FERMI GBM GAMMA-RAY BURST SPECTRAL CATALOG: FOUR YEARS OF DATA' - Gruber et al 
 
 \begin{center}\vspace{.5cm}
-    \includegraphics[width=20cm]{figures/spectra.png}\includegraphics[scale=.65]{figures/Integralinstru.jpg}
-    \captionof{figure}{(\textit{Left}) Prompt and afterglow emission spectra from SGRBs systems. Fluxes have been normalized with respect to the INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. (\textit{Right}) Instruments embarked on INTEGRAL satellite.} \vs{use ph/keV/cm2/s; describe models in the spectra (the plotted models are quite far from realistic )}
+    \includegraphics[width=20cm]{figures/spectra.png}\includegraphics[scale=.65]{figures/INTEGRAL.jpg}
+    \captionof{figure}{(\textit{Left}) Prompt and afterglow emission spectra from SGRBs systems. Fluxes have been normalized with respect to the INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. (\textit{Right}) Instruments embarked on INTEGRAL satellite.}
     \label{spectra}
 \end{center}
 
@@ -234,14 +234,14 @@ from every sky direction.
 
 \begin{center}\vspace{.5cm}
     \includegraphics[scale=.6]{figures/covered_region.png}
-    %\includegraphics[scale=.45]{figures/fluence_distribution_12_pe.png}
-    %\includegraphics[scale=.37]{figures/sensitivity_distribution_pe.png}
+    \includegraphics[scale=.45]{figures/fluence_distribution_12.png}
+    \includegraphics[scale=.37]{figures/sensitivity_distribution_pe.png}
     \captionof{figure}{(\textit{Left}) Cumulative distribution of the fraction of the LIGO/Virgo localization region accessible to INTEGRAL pointed follow-up observation in the LIGO/Virgo O2 run. (\textit{Middle}) Cumulative distribution of the detected fluences by INTEGRAL in the LIGO/Virgo O2 run.(\textit{Right}) Cumulative distribution of the sensitivity of the IBIS and SPI-ACS instruments.}
     \label{covered_region}
 \end{center}
 
 Choosing an isotropic sky distribution of our GW events, we show that
-in every case where the Earch is within the GRB emission cone,
+in every case where the Earth is within the GRB emission cone,
 INTEGRAL detects prompt emission with significance at least 50~sigma.
 The rate of detection is 0.5 in 6 month of O2 in the case of faint
 LIGO events (\vs{SNR}) and 0.1 in 6 month in the case of loud events
@@ -252,14 +252,14 @@ LIGO events (\vs{SNR}) and 0.1 in 6 month in the case of loud events
 We assume that every event reported by LIGO will be followed by
 INTEGRAL pointing. Typical latency of INTEGRAL observation is about 1
 day but may be lower in some circumstances. We compute the flux at
-several moments of time, and compare it with sensivitiy of
+several moments of time, and compare it with sensitivity of
 INTEGRAL/ISGRI in 100~ks observation.
 
-Due to observatonal constrains, only a fraction of the GW localization
+Due to observational constrains, only a fraction of the GW localization
 region can be observed by INTEGRAL. For each event we compute the
 total localization probability within the observable region, and find
 that in \vs{1\%} of the cases 99.7\% of the localization can be
-observed. However, if the complete availble region will be followed-up
+observed. However, if the complete available region will be followed-up
 every time, in total 80\% of the true source locations will be
 covered.
 
@@ -274,9 +274,9 @@ on assumptions on rather uncertain source model, and we assume only
 one, yet realistic, option.
 
 \begin{center}\vspace{.5cm}
-  %\includegraphics[width=20cm]{figures/significance_vs_rate_af.png}
-    \captionof{figure}{Significance distribution on detected sources
-      depending on time delay after the prompt emission.}
+  \includegraphics[width=20cm]{figures/significance_vs_rate_af.png}
+  \captionof{figure}{Significance distribution on detected sources
+    depending on time delay after the prompt emission.}
     \label{covered_region}
 \end{center}
 
@@ -311,7 +311,7 @@ source ?
 
 %\nocite{*} % Print all references regardless of whether they were cited in the poster or not
 \bibliographystyle{plain} % Plain referencing style
-\bibliography{reference} % Use the example bibliography file sample.bib
+\bibliography{bib_other} % Use the example bibliography file sample.bib
 
 %----------------------------------------------------------------------------------------
 
