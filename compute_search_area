@@ -1,0 +1,77 @@
+#!/usr/bin/python
+#
+# Copyright (C) 2011-2014  Leo Singer
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Modified by B. Patricelli (barbara.patricelli@pi.infn.it)
+# March 2015
+"""
+Plot an all-sky map on a Mollweide projection.
+By default, plot in celestial coordinates (RA, Dec).
+
+To plot in geographic coordinates (longitude, latitude) with major
+coastlines overlaid, provide the --geo flag.
+
+Public-domain cartographic data is courtesy of Natural Earth
+(http://www.naturalearthdata.com) and processed with MapShaper
+(http://www.mapshaper.org).
+"""
+__author__ = "Leo Singer <leo.singer@ligo.org>"
+
+
+# Command line interface
+
+from optparse import Option, OptionParser
+from lalinference.bayestar import command
+
+parser = OptionParser(
+    description = __doc__,
+    usage = "%prog [INPUT]",
+)
+opts, args = parser.parse_args()
+infilename = command.get_input_filename(parser, args)
+
+import os
+import json
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import rcParams
+import healpy as hp
+import lal
+from lalinference import fits
+from lalinference import plot
+
+skymap, metadata = fits.read_sky_map(infilename, nest=None)
+nside = hp.npix2nside(len(skymap))
+
+# Convert sky map from probability to probability per square degree.
+probperdeg2 = skymap / hp.nside2pixarea(nside, degrees=True)
+deg2=hp.nside2pixarea(nside, degrees=True)
+
+indices = np.argsort(-skymap)
+region = np.empty(skymap.shape)
+region[indices] = 100 * np.cumsum(skymap[indices])
+mylist=region[indices]
+
+ND1 = ND2 = 0.0
+for pix_prob in mylist:
+    if pix_prob < 90.0:
+        ND1 += 1
+    if pix_prob < 50.0:
+        ND2 += 1
+        
+print("search_area_90_50: %s;%.3f;%.3f"%(infilename,ND1*deg2,ND2*deg2))
+
+
