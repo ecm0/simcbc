@@ -104,8 +104,8 @@
 
 \section*{Motivations}
 
-\ECM{Intro on LIGO Virgo -- Objective of the study and major steps.}
-
+%\ECM{Intro on LIGO Virgo -- Objective of the study and major steps.}
+On September 2015, the two LIGO interferometers realized the first direct detection of gravitational waves (GW) and inaugurated a multi-messenger era in astronomy history. A next step would be to detect some electromagnetic (EM) counterparts associated to GW events during the second observing run (O2). Among them short gamma-ray bursts (SGRBs) produced by the coalescence of binary neutron stars are surely the most promising sources detectable by high energy detectors. We thus address the question of the joint detectability of GW events by Advanced Virgo and Advanced LIGO interferometers, and EM events with the INTEGRAL mission. \\
 \emph{We produce a end-to-end simulation of the search for gravitational-waves
 from binary neutron star mergers \textit{and} follow-up observation seeking a
  possible electromagnetic counterpart at high-energies.} This study is similar
@@ -124,8 +124,8 @@ mergers for a $100$ year simulation.
     \includegraphics[width=30cm]{figures/summary_plot.png}
 \end{center}
 
-We inject GW signals corresponding to the binary mergers (using model
-``TaylorT4'') and inject them into Gaussian noise colored according to the
+We simulate GW signals corresponding to the binary mergers (using model
+``TaylorT4'') and inject them into Gaussian noise coloured according to the
 ``optimistic'' power-spectral density anticipated for the 2nd LIGO/Virgo run O2
 \cite{lrr-2016-1}. We select signals with $\mathrm{SNR}_{\mathrm{combined}} > 9$
 corresponding to a false-alarm rate $\mathrm{FAR} < 1/\mathrm{month}$. The average range
@@ -143,58 +143,44 @@ position of the source with the BAYESTAR pipeline \cite{PhysRevD.93.024013}.
 
 \section*{Electromagnetic emission model from neutron-star binary mergers}
 
-\ECM{Tell: Connection BNS / Gamma-ray bursts, simplified GRB emission model with basic features}
+%\ECM{Tell: Connection BNS / Gamma-ray bursts, simplified GRB emission model with basic features}
 
-Every simulated GW event is associated to a gamma-ray event.
-
-Observational evidences of GRBs generally show two kinds of EM emissions : a
-prompt emission in the gamma-ray or X-ray domain which corresponds to the
-collimated ejection of relativistic jets of matter, and an afterglow emission in
-the X-ray, optic or radio domain produced after the ejecta has been slowed down
-by internally driven shocks between many layers.
+The coalescence of BNS systems is known to be a potential candidate for SGRBs. As the material from the two neutron stars collide, the tremendous amount of energy implied in the process accelerate the matter. It results in the emission of a non-thermal spectrum in the gamma-ray domain (mostly synchrotron). \\
+Observational evidences of GRBs generally show two kinds of EM emissions : a prompt emission in the gamma-ray or X-ray domain which corresponds to the collimated ejection of relativistic jets of matter, and an afterglow emission in the X-ray, optic or radio domain produced after the ejecta has been slowed down by internally driven shocks between many layers. \\
+Here we present a simplified GRB emission model with some basic feature. For instance, every simulated GW event is associated to a gamma-ray event and the total emitted EM energy is not dependant on the BNS inclination with respect to the line of sight.
 
 \subsection*{Prompt emission}
 
-\ECM{Tell: light curve evolution, isotropic emitted energy and beaming}
+%\ECM{Tell: light curve evolution, isotropic emitted energy and beaming}
 
-The prompt emission is well modelled by the BAND emission spectrum with the
-following fixed parameters $\alpha_{\mathrm{BAND}} = - 0.5$,
-$\beta_{\mathrm{BAND}} = - 2.25$ and $E_{\mathrm{peak}} = 800 \, MeV$. As it is
-associated to the coalescence of the BNS it is not expected to last more than a
-few seconds. 
+Luminosity curves associated to the prompt emission show a huge variability of patterns but some features enable use to disentangle short gamma-ray burst ($\sim 100 \, ms$) from long gamma-ray bursts ($\sim 10 \, ms$). However both present an abrupt peak immediately followed by a damped decay. \\
+\indent The prompt emission is well modelled by the Band emission spectrum with the following fixed parameters $\alpha_{\mathrm{BAND}} = - 0.5$, $\, \beta_{\mathrm{BAND}} = - 2.25$ and $E_{\mathrm{peak}} = 800 \, \mathrm{MeV}$. As it is associated to the coalescence of the BNS it is not expected to last more than a few seconds. 
 
 \subsection*{Afterglow}
 
-\ECM{Tell: light curve evolution, isotropic emitted energy and beaming}
+%\ECM{Tell: light curve evolution, isotropic emitted energy and beaming}
 
-As well the afterglow emission in the X-ray lasts until 3 days after the
-coalescence of the BNS system and is modelled by a cut-off power law with
-$\lambda = - 0.5$ and $E_{\mathrm{peak}} = 600 \, keV$. 
+After the ejecta has been slowed down, the extremely beamed emission tends to open up as it looses energy (GRB is mostly visible in soft X-ray). The luminosity curve rapidly decreases after prompt emission and can be modelled by a cut-off power law with $\lambda = - 0.5$ and $E_{\mathrm{peak}} = 600 \, \mathrm{keV}$. Contrary to the prompt emission the afterglow lasts from several days to several weeks (in the radio domain) after the coalescence. \\
+\indent In our model we considered a follow-up occurring at late afterglow. In the absence of any beaming the emission is taken to be isotropic.
+
 
 % Power law model see Eq(1) of 'THE FERMI GBM GAMMA-RAY BURST SPECTRAL CATALOG: FOUR YEARS OF DATA' - Gruber et al 
 
 \begin{center}\vspace{.5cm}
-    \includegraphics[width=20cm]{figures/spectra.png}
-    \captionof{figure}{Prompt and afterglow emission spectra from SGRBs systems. Fluxes have been normalized with respect to the INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$.}
+    \includegraphics[width=20cm]{figures/spectra.png}\includegraphics[scale=.65]{figures/Integralinstru.jpg}
+    \captionof{figure}{(\textit{Left}) Prompt and afterglow emission spectra from SGRBs systems. Fluxes have been normalized with respect to the INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. (\textit{Right}) Instruments embarked on INTEGRAL satellite.}
     \label{spectra}
 \end{center}
 
 \section*{The INTEGRAL mission and possible follow-up strategies}
 
-\ECM{Describe the relevant instruments here. Energy range covered. FOV.}
+%\ECM{Describe the relevant instruments here. Energy range covered. FOV.}
+% LINK : http://www.cosmos.esa.int/web/integral/instruments-ibis
+%        http://www.cosmos.esa.int/web/integral/instruments-spi
 
-The EM follow-up strategy is partially determined by instrumental
-performances. The INTEGRAL satellite embarks to instruments : the SPI- ACS
-gamma-ray spectrometer and the IBIS imager. The former takes advantage of a very
-wide field of view (FoV) essential to monitor prompt emissions (passive
-follow-up) whereas the latter has a good enough spatial resolution once is is on
-source (active follow-up).
+The EM follow-up strategy is partially determined by instrumental performances. The INTEGRAL satellite embarks to instruments : the SPI- ACS gamma-ray spectrometer and the IBIS imager. The former takes advantage of a very wide $16^{\circ}$-field of view (FoV) essential to monitor prompt emissions (passive follow-up) in the  $\left[ 18 \, \mathrm{keV}, 8 \, \mathrm{MeV} \right]$  energy range, whereas the latter has a good enough spatial resolution of $12 \, \mathrm{arcsec}$ (FWHM) in the $\left[ 15 \, \mathrm{keV}, 10 \, \mathrm{MeV} \right]$ energy range once it is on source (active follow-up).
 
 % As GRBs will then be monitored thanks to the SPI-ACS and IBIS instruments embarked on the \textsc{INTEGRAL} satellite mission, we thus have to convert the energy information into some constraints acting on the detectable energy flux by those instruments. The emitted EM flux is hence truncated to the \textsc{INTEGRAL} finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. \\
-
-\begin{center}
-    \includegraphics[width=10cm]{figures/INTEGRAL.png}
-\end{center}
 
 
 \section*{Results}
@@ -202,8 +188,8 @@ source (active follow-up).
 \subsection*{Prompt -- Passive follow-up}
 
 \begin{center}\vspace{.5cm}
-    \includegraphics[width=20cm]{figures/covered_region.png}
-    \captionof{figure}{Cumulative distribution of the fraction of the LIGO/Virgo localization region accessible to INTEGRAL pointed follow-up observation in the LIGO/Virgo O2 run.}
+    \includegraphics[scale=.6]{figures/covered_region.png}\includegraphics[scale=.45]{figures/fluence_distribution_12_pe.png}\includegraphics[scale=.37]{figures/sensitivity_distribution_pe.png}
+    \captionof{figure}{(\textit{Left}) Cumulative distribution of the fraction of the LIGO/Virgo localization region accessible to INTEGRAL pointed follow-up observation in the LIGO/Virgo O2 run. (\textit{Middle}) Cumulative distribution of the detected fluences by INTEGRAL in the LIGO/Virgo O2 run.(\textit{Right}) Cumulative distribution of the sensitivity of the IBIS and SPI-ACS instruments.}
     \label{covered_region}
 \end{center}
 
@@ -212,7 +198,7 @@ detects 55 \% of the events with a $20 \, \sigma$-significance for faint event
 and 10 \% of the events with a $30 \, \sigma$-significance for loud events if
 the aLIGO/Advanced Virgo network is considered.
 
-We also show that it exists a sky region complementarity between the two onboard
+We also show that it exists a sky region complementarity between the two on board
 instruments. Indeed, one has an excellent FoV whereas the other has a better
 resolution. That is why we achieve with a better sensitivity combining the two.
 
@@ -225,6 +211,12 @@ strategy is then conditioned by two factors. The first one is the error-box area
 covered by INTEGRAL at the prompt emission time. We decide from the right figure
 ?? we can trigger a follow-up if more than 30 \% of the error box is initially
 covered.
+
+\begin{center}\vspace{.5cm}
+    \includegraphics[width=20cm]{figures/significance_vs_rate_af.png}
+    \captionof{figure}{toto.}
+    \label{covered_region}
+\end{center}
 
 The left figure brings an answer to the second question : what is the duration
 limit after the prompt emission within which we are able to detect the SGRB
