@@ -66,7 +66,7 @@
 
 \begin{minipage}[b]{0.75\linewidth}
   \Huge \textbf{ 	Prospects about X- and gamma-ray counterparts of gravitational wave signals with INTEGRAL}\\[1cm] % Title
-  \large \textbf{P.~Bacon, V.~Savchenko and E.~Chassande-Mottin}\\[1cm] % Author(s)
+  \large \textbf{P.~Bacon, V.~Savchenko and E.~Chassande-Mottin \vs{we should think to add INTEGRAL collaboration}}\\[1cm] % Author(s)
   \normalsize APC, Univ Paris Diderot, CNRS/IN2P3, CEA/Irfu, Obs. de Paris, Sorbonne Paris Cit\'e, France\\
   \large \texttt{philippe.bacon@apc.in2p3.fr}\\
 \end{minipage}
@@ -83,18 +83,20 @@
 
 
  \begin{abstract}
-   By extrapolating the number of detections made during the first LIGO science
-   run, tenths of gravitational wave signals from binary black hole mergers are
-   anticipated in upcoming LIGO Virgo science runs. Finding an electromagnetic
-   counterpart to compact binary merger events would be a landmark
-   discovery. The search for such counterpart is challenging for a number of
-   reasons, such as the poor resolution of source position reconstruction from
-   the gravitational wave observations alone, and the weakness of the expected
-   electromagnetic signal. In this poster, we evaluate the ability of current
-   wide-field X- and gamma-ray telescopes aboard INTEGRAL to find such
-   counterparts. We present the result of an end-to-end simulation for
-   estimating the fraction of the sources that can be followed up, and the
-   fraction of counterparts that can be detected based on different models.
+   By extrapolating the number of detections made during the first
+   LIGO science run, tenths of gravitational wave signals from binary
+   black hole mergers are anticipated in upcoming LIGO Virgo science
+   runs. Finding an electromagnetic counterpart to compact binary
+   merger events would be a landmark discovery. The search for such
+   counterpart is challenging for a number of reasons, such as the
+   poor resolution of source position reconstruction from the
+   gravitational wave observations alone, and the weakness of the
+   expected electromagnetic signal. In this poster, we evaluate the
+   ability of current wide-field X- and gamma-ray telescopes aboard
+   INTEGRAL to find such counterparts. We present the result of an
+   end-to-end simulation for estimating the fraction of the sources
+   that can be followed up, and the fraction of counterparts that can
+   be detected based on different models.
  \end{abstract}
 
  % satellite : What fraction of GW events can be recovered in the EM spectrum ?
@@ -143,32 +145,65 @@ position of the source with the BAYESTAR pipeline \cite{PhysRevD.93.024013}.
 
 \section*{Electromagnetic emission model from neutron-star binary mergers}
 
-%\ECM{Tell: Connection BNS / Gamma-ray bursts, simplified GRB emission model with basic features}
+As the material from the two neutron stars collide, tremendous amount
+of energy implied in the process accelerate the matter. For this
+reason compact binary mergers involving at least one neutron star are
+considered to be a candidate to the progentiors of short gamma-ray
+bursts.
 
-The coalescence of BNS systems is known to be a potential candidate for SGRBs. As the material from the two neutron stars collide, the tremendous amount of energy implied in the process accelerate the matter. It results in the emission of a non-thermal spectrum in the gamma-ray domain (mostly synchrotron). \\
-Observational evidences of GRBs generally show two kinds of EM emissions : a prompt emission in the gamma-ray or X-ray domain which corresponds to the collimated ejection of relativistic jets of matter, and an afterglow emission in the X-ray, optic or radio domain produced after the ejecta has been slowed down by internally driven shocks between many layers. \\
-Here we present a simplified GRB emission model with some basic feature. For instance, every simulated GW event is associated to a gamma-ray event and the total emitted EM energy is not dependant on the BNS inclination with respect to the line of sight.
+ Short GRBs constitute a subset of the whole GRB population,
+ distinguished from the long GRBs by duration of their initial bright
+ burst emission, with the threshold duration usually assumed to be 2
+ seconds. Short GRBs are also harder then long, reveal different
+ spectral lags, and are located in different galaxies and sites in the
+ galaxies.
+
+Bright prompt emission, primarily in gamma-ray and X-ray domain, is
+attributed to dissipation within the collimated ultra-relativistic
+outflow. Prompt emission is strongly beamed. It is followed by slowly
+decaying afterglow, observed from radio to GeV, produced in the
+interaction between the ejecta and the ambient medium surrounding the
+GRB progenitor. Afterglow emission is originally also strongly beamed,
+but as the outflow deccelerates, the emission becomes progressively
+more isotropic.
+
+In our simulation we assume that every BNS merger is associated with a
+short gamma-ray burst. We simulate synthetic prompt GRB and a hard
+X-ray afterglow, assuming simplified model, as described in the
+following sections.
 
 \subsection*{Prompt emission}
 
 %\ECM{Tell: light curve evolution, isotropic emitted energy and beaming}
 
-Luminosity curves associated to the prompt emission show a huge variability of patterns but some features enable use to disentangle short gamma-ray burst ($\sim 100 \, ms$) from long gamma-ray bursts ($\sim 10 \, ms$). However both present an abrupt peak immediately followed by a damped decay. \\
-\indent The prompt emission is well modelled by the Band emission spectrum with the following fixed parameters $\alpha_{\mathrm{BAND}} = - 0.5$, $\, \beta_{\mathrm{BAND}} = - 2.25$ and $E_{\mathrm{peak}} = 800 \, \mathrm{MeV}$. As it is associated to the coalescence of the BNS it is not expected to last more than a few seconds. 
+The prompt emission spectrum of GRBs is usually modelled by smoothly
+broken powerlaw, so-called the Band \citep{band93} model. In the case
+of short GRBs, the slope above the peak energy is not well
+constrained, and the spectrum can be well-described by a cutoff
+powerlaw. For simplicity we assume the same prompt emission spectrum
+for all synthetic GRB, $\alpha_{\mathrm{BAND}} = - 0.5$,
+$E_{\mathrm{peak}} = 600 \, keV$, close to the average short GRB
+spectrum observed by Fermi/GBM \citep{gruber14}. We also assume fixed
+duration of the prompt emission of 1 second and fixed isotropic
+equivalent luminosity of $10^{50}~erg~cm^{-2}~s^{-1}$.
+
 
 \subsection*{Afterglow}
 
-%\ECM{Tell: light curve evolution, isotropic emitted energy and beaming}
+After the ejecta has been slowed down, the beamed emission tends to
+open up as it looses energy. Contrary to the prompt emission the
+afterglow lasts from several days to several weeks (in the radio
+domain) after the coalescence. 
 
-After the ejecta has been slowed down, the extremely beamed emission tends to open up as it looses energy (GRB is mostly visible in soft X-ray). The luminosity curve rapidly decreases after prompt emission and can be modelled by a cut-off power law with $\lambda = - 0.5$ and $E_{\mathrm{peak}} = 600 \, \mathrm{keV}$. Contrary to the prompt emission the afterglow lasts from several days to several weeks (in the radio domain) after the coalescence. \\
-\indent In our model we considered a follow-up occurring at late afterglow. In the absence of any beaming the emission is taken to be isotropic.
-
+\indent In our model we considered a follow-up occurring at late
+afterglow. In the absence of any beaming the emission is taken to be
+isotropic.
 
 % Power law model see Eq(1) of 'THE FERMI GBM GAMMA-RAY BURST SPECTRAL CATALOG: FOUR YEARS OF DATA' - Gruber et al 
 
 \begin{center}\vspace{.5cm}
     \includegraphics[width=20cm]{figures/spectra.png}\includegraphics[scale=.65]{figures/Integralinstru.jpg}
-    \captionof{figure}{(\textit{Left}) Prompt and afterglow emission spectra from SGRBs systems. Fluxes have been normalized with respect to the INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. (\textit{Right}) Instruments embarked on INTEGRAL satellite.}
+    \captionof{figure}{(\textit{Left}) Prompt and afterglow emission spectra from SGRBs systems. Fluxes have been normalized with respect to the INTEGRAL finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. (\textit{Right}) Instruments embarked on INTEGRAL satellite.} \vs{use ph/keV/cm2/s; describe models in the spectra (the plotted models are quite far from realistic )}
     \label{spectra}
 \end{center}
 
@@ -178,7 +213,10 @@ After the ejecta has been slowed down, the extremely beamed emission tends to op
 % LINK : http://www.cosmos.esa.int/web/integral/instruments-ibis
 %        http://www.cosmos.esa.int/web/integral/instruments-spi
 
-The EM follow-up strategy is partially determined by instrumental performances. The INTEGRAL satellite embarks to instruments : the SPI- ACS gamma-ray spectrometer and the IBIS imager. The former takes advantage of a very wide $16^{\circ}$-field of view (FoV) essential to monitor prompt emissions (passive follow-up) in the  $\left[ 18 \, \mathrm{keV}, 8 \, \mathrm{MeV} \right]$  energy range, whereas the latter has a good enough spatial resolution of $12 \, \mathrm{arcsec}$ (FWHM) in the $\left[ 15 \, \mathrm{keV}, 10 \, \mathrm{MeV} \right]$ energy range once it is on source (active follow-up).
+The INTEGRAL satellite carries a combination of pointing instruments,
+covering wide energy range from 3 keV to 10 MeV with fields of view up
+to 900 deg$^2$. In addition, INTEGRAL/SPI-ACS and IBIS are capable of
+detecting bright transients from every sky direction.
 
 % As GRBs will then be monitored thanks to the SPI-ACS and IBIS instruments embarked on the \textsc{INTEGRAL} satellite mission, we thus have to convert the energy information into some constraints acting on the detectable energy flux by those instruments. The emitted EM flux is hence truncated to the \textsc{INTEGRAL} finite energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. \\
 
@@ -193,23 +231,22 @@ The EM follow-up strategy is partially determined by instrumental performances. 
     \label{covered_region}
 \end{center}
 
-Choosing an isotropic sky distribution of our GW events, we show that INTEGRAL
-detects 55 \% of the events with a $20 \, \sigma$-significance for faint event
-and 10 \% of the events with a $30 \, \sigma$-significance for loud events if
-the aLIGO/Advanced Virgo network is considered.
-
-We also show that it exists a sky region complementarity between the two on board
-instruments. Indeed, one has an excellent FoV whereas the other has a better
-resolution. That is why we achieve with a better sensitivity combining the two.
+Choosing an isotropic sky distribution of our GW events, we show that
+in every case where the Earch is within the GRB emission cone,
+INTEGRAL detects prompt emission with significance at least 50~sigma.
+The rate of detection is 0.5 in 6 month of O2 in the case of faint
+LIGO events (\vs{SNR}) and 0.1 in 6 month in the case of loud events
+(\vs{SNR}).
 
 \subsection*{Afterglow -- Instrument repointing}
 
-As stated before the X-ray emission we investigate occurs until few days or
-weeks after the prompt emission. It thus enable us to re-point the INTEGRAL
-satellite and to align the IBIS instrument onto the source. The observation
-strategy is then conditioned by two factors. The first one is the error-box area
-covered by INTEGRAL at the prompt emission time. We decide from the right figure
-?? we can trigger a follow-up if more than 30 \% of the error box is initially
+As stated before the X-ray emission we investigate occurs until few
+days or weeks after the prompt emission. It thus enable us to re-point
+the INTEGRAL satellite and to align the IBIS instrument onto the
+source. The observation strategy is then conditioned by two
+factors. The first one is the error-box area covered by INTEGRAL at
+the prompt emission time. We decide from the right figure ?? we can
+trigger a follow-up if more than 30 \% of the error box is initially
 covered.
 
 \begin{center}\vspace{.5cm}
