@@ -20,6 +20,7 @@
 
 \documentclass[a0,portrait]{a0poster}
 
+\usepackage{setspace}
 \usepackage{subcaption} 
 \usepackage{natbib} % use citep
 \usepackage{ wasysym } % astrosun symbol.
@@ -66,7 +67,7 @@
 
 \begin{minipage}[b]{0.75\linewidth}
   \Huge \textbf{ 	Prospects about X- and gamma-ray counterparts of gravitational wave signals with INTEGRAL}\\[1cm] % Title
-  \large \textbf{P.~Bacon, V.~Savchenko and E.~Chassande-Mottin \vs{we should think to add INTEGRAL collaboration}}\\[1cm] % Author(s)
+  \large \textbf{P.~Bacon, V.~Savchenko, E.~Chassande-Mottin and P.~Laurent}\\[1cm] % Author(s)
   \normalsize APC, Univ Paris Diderot, CNRS/IN2P3, CEA/Irfu, Obs. de Paris, Sorbonne Paris Cit\'e, France\\
   \large \texttt{philippe.bacon@apc.in2p3.fr}\\
 \end{minipage}
@@ -126,9 +127,10 @@ according to Model A ($Z_{\astrosun}$ metallicity) of
 \cite{dominik12:_doubl_compac_objec}. This results in a population of 14\,000
 mergers for a $100$ year simulation.
 
-\begin{center}\vspace{.5cm}
+\begin{center}
     \includegraphics[width=30cm]{figures/summary_plot.png}
 \end{center}
+\vspace*{-0.8cm}
 
 \emph{We simulate GW signals corresponding to the binary mergers} (using model
 ``TaylorT4'') and inject them into Gaussian noise coloured according to the
@@ -168,8 +170,10 @@ gamma-ray burst. We simulate synthetic prompt GRB and a hard X-ray afterglow,
 assuming the following simplified model.}
 
 \subsection*{Prompt emission}
-\emph{We model the prompt emission spectrum by a broken power-law, so-called the Band
-\cite{band93} model}. For simplicity we assume the same prompt emission spectrum
+We model the prompt emission spectrum by the cut-off power-law model. This
+model is a variant of the Band model \cite{band93} where high-energies have
+been suppressed because they are generally not well constrained by the
+observations. For simplicity we assume the same prompt emission spectrum
 for all synthetic GRB, with $\alpha_{\mathrm{BAND}} = - 0.5$ and
 $E_{\mathrm{peak}} = 600$ \, keV, close to the average short GRB spectrum
 observed by Fermi/GBM \cite{gruber14}.  
@@ -198,14 +202,14 @@ frequently due to observational limitations.
 occurring about once in few months (2\% of the sky observed by INTEGRAL)}.  When
 hard X-ray afterglows are observed, INTEGRAL observations reveals very high
 SNR. For instance, GRB120711A was seen in INTEGRAL/ISGRI and JEM-X for about 8
-hours \cite{martincarillo14}. The bright hard X-ray emission afterglow found to
+hours \cite{martin-carrillo14:_grb}. The bright hard X-ray emission afterglow found to
 be related to the bright gamma-ray afterglow, observed by Fermi/LAT in the
 energy range above 100 MeV. In particular, it had the same spectrum, power-law
 with a slope of -2.
 
 We \emph{assume a spectrum similar to GRB120711A, but rescaled to the total EM
 luminosity of a typical short GRB - $10^{50}~$erg$^{-2}~$s$^{-1}$}. We extrapolate
-this spectrum to the off-axis case using Model~I in \cite{xxx}.
+this spectrum to the off-axis case using Model~I in \cite{2016arXiv160606124P}.
 
 % In most of the cases the outflow is not aligned with the line of sight. To
 % compute the afterglow light curve as seen off-axis, we assume that the
@@ -219,6 +223,7 @@ this spectrum to the off-axis case using Model~I in \cite{xxx}.
     \includegraphics[height=9cm]{figures/spectra.png}
     \includegraphics[height=8cm]{figures/INTEGRAL.jpg}
     \captionof{figure}{(\textit{Left}) Prompt and afterglow emission spectra of short GRBs. Fluxes have been normalized with respect to the INTEGRAL energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. (\textit{Right}) Instruments embarked on INTEGRAL satellite.}
+    \vspace*{-0.8cm}
     \label{spectra}
 \end{center}
 
@@ -245,8 +250,9 @@ from every sky direction.
 \subsection*{Prompt -- Passive follow-up}
 
 \begin{center}
-    \includegraphics[height=8cm]{figures/fluence_distribution_9.png}
-    \includegraphics[height=8cm]{figures/significance_distribution_9_11_5.png}
+    \includegraphics[height=9cm]{figures/fluence_distribution_9.png}
+    \includegraphics[height=9cm]{figures/significance_distribution_9_11_5.png}
+  \vspace*{-0.7cm}
     \captionof{figure}{(\textit{Left}) Cumulative distribution of the
       detected fluences by INTEGRAL in the LIGO/Virgo O2
       run.(\textit{Right}) Cumulative distribution of the significance
@@ -257,22 +263,21 @@ from every sky direction.
 Choosing an isotropic sky distribution of our GW events, we show that
 in every case where the Earth is within the GRB emission cone,
 \emph{INTEGRAL detects prompt emission with significance at least 50~sigma.
-The rate of detection is 0.5 in 6 month of O2 in the case of faint
-LIGO events (\vs{SNR})} and \emph{0.1 in 6 month in the case of loud events
-(\vs{SNR})}.
+The rate of detection is 0.5 in the 6 months of O2 for GW alerts (SNR > 9)} 
+and \emph{0.1 in 6 months  in the case of 4-sigma GW events (SNR = 11.5)}.
 
 \subsection*{Afterglow -- Instrument repointing}
 
 INTEGRAL can point only to a fraction of the GW localization region. For each
 event we compute the total localization probability within the observable
-region, and find that \emph{in \vs{1\%} of the cases 99.7\% of the localization can be
+region, and find that \emph{in 1\% of the cases 99.7\% of the localization can be
 observed}. However, if the complete available region is followed up every
 time, \emph{in total 80\% of the true source locations are covered.}
 
-
 \begin{center}
-  \includegraphics[height=8cm]{figures/covered_region_9_-1_normed.png}
-  \includegraphics[height=8cm]{figures/significance_vs_rate_af.png}
+  \includegraphics[height=9cm]{figures/covered_region_9_-1_normed.png}
+  \includegraphics[height=9cm]{figures/significance_vs_rate_af.png}
+\vspace*{-1.5cm}
   \captionof{figure}{(\textit{Left}) Cumulative distribution of the
     fraction of the LIGO/Virgo localization region accessible to
     INTEGRAL pointed follow-up observation in the LIGO/Virgo O2
@@ -283,7 +288,7 @@ time, \emph{in total 80\% of the true source locations are covered.}
 \end{center}
 
 We find that the \emph{expected rate of 5~sigma detections is only about
-\vs{0.01} events in 6 month of O2.} We explore also another
+0.01 events in 6 months of O2}. We explore also another
 possibility, that \emph{10\% of the events launch much more energetic
 outflow}, in agreement with luminosities observed in real short
 GRBs. \emph{In this case we expect about 0.1 events seen in 6 months.} 
@@ -291,8 +296,6 @@ GRBs. \emph{In this case we expect about 0.1 events seen in 6 months.}
 We stress that the \emph{afterglow prediction is particularly sensitive to
 assumptions on rather uncertain source model}, and we assume only
 one, yet realistic, option.
-
-\ECM{Conclusions here}
 
 % \section*{Conclusions}
 
@@ -311,12 +314,11 @@ one, yet realistic, option.
 \vspace{10mm}
 \noindent {\normalsize \textbf{Acknowledgements}}
 
-{\footnotesize This research was supported European Union’s Horizon 2020
-  research and innovation programme under grant agreement No 653477. The authors
-  would like to thank the LIGO Scientific Collaboration and Virgo Collaboration
-  for giving access to the simulation software used here, Barbara Patricelli for
-  sharing her simulations with us and Philippe Laurent for fruitful
-  discussions.}
+{\linespread{0.1} \footnotesize This research was supported European Union’s Horizon 2020 research and
+  innovation programme under grant agreement No 653477. The authors would like
+  to thank the LIGO Scientific Collaboration and Virgo Collaboration for giving
+  access to the simulation software used here, Barbara Patricelli for sharing
+  her simulations with us.}
 
 %----------------------------------------------------------------------------------------
 %	REFERENCES
@@ -324,7 +326,7 @@ one, yet realistic, option.
 
 {\footnotesize
 \bibliographystyle{plain} % Plain referencing style
-\bibliography{bib_other} % Use the example bibliography file sample.bib
+\bibliography{reference} % Use the example bibliography file sample.bib
 }
 
 %----------------------------------------------------------------------------------------
