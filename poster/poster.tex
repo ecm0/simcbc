@@ -66,7 +66,7 @@
 
 \begin{minipage}[b]{0.75\linewidth}
   \Huge \textbf{ 	Prospects about X- and gamma-ray counterparts of gravitational wave signals with INTEGRAL}\\[1cm] % Title
-  \large \textbf{P.~Bacon, V.~Savchenko and E.~Chassande-Mottin}\\[1cm] % Author(s)
+  \large \textbf{P.~Bacon, V.~Savchenko and E.~Chassande-Mottin \vs{we should think to add INTEGRAL collaboration}}\\[1cm] % Author(s)
   \normalsize APC, Univ Paris Diderot, CNRS/IN2P3, CEA/Irfu, Obs. de Paris, Sorbonne Paris Cit\'e, France\\
   \large \texttt{philippe.bacon@apc.in2p3.fr}\\
 \end{minipage}
@@ -90,7 +90,7 @@
    merger events would be a landmark discovery. The search for such
    counterpart is challenging for a number of reasons, such as the
    poor resolution of source position reconstruction from the
-   gravitational wave observations alone, and possibly weakness of the
+   gravitational wave observations alone, and the weakness of the
    expected electromagnetic signal. In this poster, we evaluate the
    ability of current wide-field X- and gamma-ray telescopes aboard
    INTEGRAL to find such counterparts. We present the result of an
@@ -110,7 +110,7 @@ On Sep 14 2015, the two LIGO interferometers made the first direct detection of
 gravitational waves (GW). A next step would be to detect an electromagnetic (EM)
 counterpart associated to a GW event. This would inaugurate a new,
 multimessenger era in the astronomy history. We address the question of the
-joint detectability of GW events by Advanced Virgo and Advanced LIGO, and
+joint detectability of GW events by Advanced LIGO, and
 associated EM events at high-energies by the INTEGRAL mission. We produce an
 \emph{end-to-end simulation of the search for gravitational-waves from binary
   neutron star mergers \textit{and} follow-up observation seeking a possible
@@ -130,15 +130,15 @@ mergers for a $100$ year simulation.
     \includegraphics[width=30cm]{figures/summary_plot.png}
 \end{center}
 
-We simulate GW signals corresponding to the binary mergers (using model
+\emph{We simulate GW signals corresponding to the binary mergers} (using model
 ``TaylorT4'') and inject them into Gaussian noise coloured according to the
-``optimistic'' power-spectral density anticipated for the 2nd LIGO/Virgo run O2
+\emph{``optimistic'' power-spectral density anticipated for the 2nd LIGO/Virgo run O2}
 \cite{lrr-2016-1}. We select signals with $\mathrm{SNR}_{\mathrm{combined}} > 9$
 corresponding to a false-alarm rate $\mathrm{FAR} < 1/\mathrm{month}$. The
 average range BNS is 126 Mpc for this selection.
 
 This results in 232 selected merger signals over 100 years which corresponds to
-$\sim 1$ merger over the 6-month duration of O2. We distribute those events
+\emph{$\sim 1$ merger over the 6-month duration of O2}. We distribute those events
 randomly in time over the expected period of O2 from Nov 2016 to May 2017. We
 recover GW signals using matched-filtering techniques and reconstruct the
 posterior skymaps giving the position of the source using the BAYESTAR pipeline
@@ -152,25 +152,24 @@ large and contained in a window of 700--2000 square degrees.
 
 \section*{Electromagnetic emission model from neutron-star binary mergers}
 
-Compact binary mergers involving at least one neutron star are
-considered to be plausible progenitors of short gamma-ray bursts
-(GRB). Short GRBs is a subset of the whole GRB population with
-duration shorter than $\sim$2 seconds. Short GRBs have also a harder
-spectrum. \emph{Prompt emission} is attributed to dissipation within
-the collimated ultra-relativistic jet and is therefore strongly
-beamed. It is followed by \emph{slowly decaying afterglow}, observed
-from radio to GeV, produced by the interaction between the ejecta and
-the ambient medium surrounding the GRB progenitor. Afterglow emission
-is originally also strongly beamed, but as the outflow decelerates,
-the emission becomes progressively more isotropic.
+Compact binary mergers involving at least one neutron star are considered to be
+plausible progenitors of short gamma-ray bursts (GRB). Short GRBs is a
+subset of the whole GRB population with duration shorter than $\sim$2
+seconds. Short GRBs have also a harder spectrum. \emph{Prompt emission} is attributed
+to dissipation within the collimated ultra-relativistic jet and is therefore
+strongly beamed. It is followed by \emph{slowly decaying afterglow}, observed from
+radio to GeV, produced by the interaction between the ejecta and the ambient
+medium surrounding the GRB progenitor. Afterglow emission is originally also
+strongly beamed, but as the outflow decelerates, the emission becomes
+progressively more isotropic.
 
 \emph{In our simulation we assume that every BNS merger is associated with a short
 gamma-ray burst. We simulate synthetic prompt GRB and a hard X-ray afterglow,
 assuming the following simplified model.}
 
 \subsection*{Prompt emission}
-We model the prompt emission spectrum by a broken power-law, so-called the Band
-\cite{band93} model. For simplicity we assume the same prompt emission spectrum
+\emph{We model the prompt emission spectrum by a broken power-law, so-called the Band
+\cite{band93} model}. For simplicity we assume the same prompt emission spectrum
 for all synthetic GRB, with $\alpha_{\mathrm{BAND}} = - 0.5$ and
 $E_{\mathrm{peak}} = 600$ \, keV, close to the average short GRB spectrum
 observed by Fermi/GBM \cite{gruber14}.  
@@ -184,28 +183,28 @@ fixed duration of the prompt emission of 1 second and fixed isotropic equivalent
 luminosity of $10^{50}~$erg~cm$^{-2}$~s$^{-1}$.
 
 The principal source of uncertainty on rate of GRB detections associated with
-the BNS mergers is the beaming factor of the prompt emission. We assume a fixed
-beaming angle of 10 degrees. This angle is roughly compatible with the
+the BNS mergers is the beaming factor of the prompt emission. We \emph{assume a fixed
+beaming angle of 10 degrees}. This angle is roughly compatible with the
 observations of the total short GRB rate inferred from our BNS population.
 
 \subsection*{Hard X-ray afterglows}
 
-We assume that every BNS merger produces a hard X-ray afterglow. Although
+We assume that \emph{every BNS merger produces a hard X-ray afterglow}. Although
 afterglows in the hard X-rays are rarely observed, it is not unreasonable to
 assume that they are as frequent as gamma-rays, but observed much less
 frequently due to observational limitations.
 
-There are indications that such afterglows are present in the most luminous GRBs
-occuring about once in few months (2\% of the sky observed by INTEGRAL).  When
+\emph{There are indications that such afterglows are present in the most luminous GRBs
+occurring about once in few months (2\% of the sky observed by INTEGRAL)}.  When
 hard X-ray afterglows are observed, INTEGRAL observations reveals very high
 SNR. For instance, GRB120711A was seen in INTEGRAL/ISGRI and JEM-X for about 8
 hours \cite{martincarillo14}. The bright hard X-ray emission afterglow found to
 be related to the bright gamma-ray afterglow, observed by Fermi/LAT in the
-energy range above 100 MeV. In particular, it had the same spectrum, powerlaw
+energy range above 100 MeV. In particular, it had the same spectrum, power-law
 with a slope of -2.
 
-We assume a spectrum similar to GRB120711A, but rescaled to the total EM
-luminosity of a typical short GRB - $10^{50}~$erg$^{-2}~$s$^{-1}$. We extrapolate
+We \emph{assume a spectrum similar to GRB120711A, but rescaled to the total EM
+luminosity of a typical short GRB - $10^{50}~$erg$^{-2}~$s$^{-1}$}. We extrapolate
 this spectrum to the off-axis case using Model~I in \cite{xxx}.
 
 % In most of the cases the outflow is not aligned with the line of sight. To
@@ -217,7 +216,7 @@ this spectrum to the off-axis case using Model~I in \cite{xxx}.
 % Power law model see Eq(1) of 'THE FERMI GBM GAMMA-RAY BURST SPECTRAL CATALOG: FOUR YEARS OF DATA' - Gruber et al 
 
 \begin{center}
-    \includegraphics[height=8cm]{figures/spectra.png}
+    \includegraphics[height=9cm]{figures/spectra.png}
     \includegraphics[height=8cm]{figures/INTEGRAL.jpg}
     \captionof{figure}{(\textit{Left}) Prompt and afterglow emission spectra of short GRBs. Fluxes have been normalized with respect to the INTEGRAL energy band $\left[ 75 \, , 2000 \right] \, \mathrm{keV}$. (\textit{Right}) Instruments embarked on INTEGRAL satellite.}
     \label{spectra}
@@ -257,18 +256,19 @@ from every sky direction.
 
 Choosing an isotropic sky distribution of our GW events, we show that
 in every case where the Earth is within the GRB emission cone,
-INTEGRAL detects prompt emission with significance at least 50~sigma.
+\emph{INTEGRAL detects prompt emission with significance at least 50~sigma.
 The rate of detection is 0.5 in 6 month of O2 in the case of faint
-LIGO events (\vs{SNR}) and 0.1 in 6 month in the case of loud events
-(\vs{SNR}).
+LIGO events (\vs{SNR})} and \emph{0.1 in 6 month in the case of loud events
+(\vs{SNR})}.
 
 \subsection*{Afterglow -- Instrument repointing}
 
 INTEGRAL can point only to a fraction of the GW localization region. For each
 event we compute the total localization probability within the observable
-region, and find that in \vs{1\%} of the cases 99.7\% of the localization can be
-observed. However, if the complete available region is followed up every
-time, in total 80\% of the true source locations are covered.
+region, and find that \emph{in \vs{1\%} of the cases 99.7\% of the localization can be
+observed}. However, if the complete available region is followed up every
+time, \emph{in total 80\% of the true source locations are covered.}
+
 
 \begin{center}
   \includegraphics[height=8cm]{figures/covered_region_9_-1_normed.png}
@@ -282,14 +282,14 @@ time, in total 80\% of the true source locations are covered.
     \label{covered_region}
 \end{center}
 
-We find that the expected rate of 5~sigma detections is only about
-\vs{0.01} events in 6 month of O2. We explore also another
-possibility, that 10\% of the events launch much more energetic
-outflow, in agreement with luminosities observed in real short
-GRBs. In this case we expect about 0.1 events seen in 6 months. 
+We find that the \emph{expected rate of 5~sigma detections is only about
+\vs{0.01} events in 6 month of O2.} We explore also another
+possibility, that \emph{10\% of the events launch much more energetic
+outflow}, in agreement with luminosities observed in real short
+GRBs. \emph{In this case we expect about 0.1 events seen in 6 months.} 
 
-We stress that the afterglow prediction is particularly sensitive to
-assumptions on rather uncertain source model, and we assume only
+We stress that the \emph{afterglow prediction is particularly sensitive to
+assumptions on rather uncertain source model}, and we assume only
 one, yet realistic, option.
 
 \ECM{Conclusions here}
