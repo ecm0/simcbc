@@ -1,45 +1,64 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem{lrr-2016-1}
-B~Abbott et~al.
-\newblock Prospects for observing and localizing gravitational-wave transients
-  with advanced ligo and advanced virgo.
-\newblock {\em living-reviews}, 19(1), 2016.
+\bibitem[{{Abbott} et~al.(2016){Abbott}, {Abbott}, {Abbott}, {Abernathy},
+  {Acernese}, {Ackley}, {Adams}, {Adams}, {Addesso}, {Adhikari}, \&
+  et~al.}]{2016LRR....19....1A}
+{Abbott}, B.~P., {Abbott}, R., {Abbott}, T.~D., {Abernathy}, M.~R., {Acernese},
+  F., {Ackley}, K., {Adams}, C., {Adams}, T., {Addesso}, P., {Adhikari}, R.~X.,
+  \& et~al. 2016, Living Reviews in Relativity, 19. \eprint{1304.0670}
 
-\bibitem{band93}
-D.~{Band} et~al.
-\newblock {BATSE observations of gamma-ray burst spectra. I - Spectral
-  diversity}.
-\newblock {\em ApJS}, 413:281--292, August 1993.
+\bibitem[{{Band} et~al.(1993){Band}, {Matteson}, {Ford}, {Schaefer}, {Palmer},
+  {Teegarden}, {Cline}, {Briggs}, {Paciesas}, {Pendleton}, {Fishman},
+  {Kouveliotou}, {Meegan}, {Wilson}, \& {Lestrade}}]{1993ApJ...413..281B}
+{Band}, D., {Matteson}, J., {Ford}, L., {Schaefer}, B., {Palmer}, D.,
+  {Teegarden}, B., {Cline}, T., {Briggs}, M., {Paciesas}, W., {Pendleton}, G.,
+  {Fishman}, G., {Kouveliotou}, C., {Meegan}, C., {Wilson}, R., \& {Lestrade},
+  P. 1993, \apj, 413, 281
 
-\bibitem{dominik12:_doubl_compac_objec}
-M.~Dominik et~al.
-\newblock Double compact objects. {I.} the significance of the common envelope
-  on merger rates.
-\newblock {\em ApJ}, 759(1):52, 2012.
-\newblock \url{www.syntheticuniverse.org}.
+\bibitem[{{Dominik} et~al.(2012){Dominik}, {Belczynski}, {Fryer}, {Holz},
+  {Berti}, {Bulik}, {Mandel}, \& {O'Shaughnessy}}]{2012ApJ...759...52D}
+{Dominik}, M., {Belczynski}, K., {Fryer}, C., {Holz}, D.~E., {Berti}, E.,
+  {Bulik}, T., {Mandel}, I., \& {O'Shaughnessy}, R. 2012, \apj, 759, 52.
+  \eprint{1202.4901}
 
-\bibitem{gruber14}
-D.~{Gruber} et~al.
-\newblock {The Fermi GBM Gamma-Ray Burst Spectral Catalog: Four Years of Data}.
-\newblock {\em ApJS}, 211:12, March 2014.
+\bibitem[{{Gruber} et~al.(2014){Gruber}, {Goldstein}, {Weller von Ahlefeld},
+  {Narayana Bhat}, {Bissaldi}, {Briggs}, {Byrne}, {Cleveland}, {Connaughton},
+  {Diehl}, {Fishman}, {Fitzpatrick}, {Foley}, {Gibby}, {Giles}, {Greiner},
+  {Guiriec}, {van der Horst}, {von Kienlin}, {Kouveliotou}, {Layden}, {Lin},
+  {Meegan}, {McGlynn}, {Paciesas}, {Pelassa}, {Preece}, {Rau}, {Wilson-Hodge},
+  {Xiong}, {Younes}, \& {Yu}}]{2014ApJS..211...12G}
+{Gruber}, D., {Goldstein}, A., {Weller von Ahlefeld}, V., {Narayana Bhat}, P.,
+  {Bissaldi}, E., {Briggs}, M.~S., {Byrne}, D., {Cleveland}, W.~H.,
+  {Connaughton}, V., {Diehl}, R., {Fishman}, G.~J., {Fitzpatrick}, G., {Foley},
+  S., {Gibby}, M., {Giles}, M.~M., {Greiner}, J., {Guiriec}, S., {van der
+  Horst}, A.~J., {von Kienlin}, A., {Kouveliotou}, C., {Layden}, E., {Lin}, L.,
+  {Meegan}, C.~A., {McGlynn}, S., {Paciesas}, W.~S., {Pelassa}, V., {Preece},
+  R.~D., {Rau}, A., {Wilson-Hodge}, C.~A., {Xiong}, S., {Younes}, G., \& {Yu},
+  H.-F. 2014, \apjs, 211, 12. \eprint{1401.5069}
 
-\bibitem{martin-carrillo14:_grb}
-{Martin-Carrillo, A.} et~al.
-\newblock Grb 120711a: an intense integral burst with long-lasting soft
-  $\gamma$-ray emission and a powerful optical flash⋆.
-\newblock {\em A\&A}, 567:A84, 2014.
+\bibitem[{{Martin-Carrillo} et~al.(2014){Martin-Carrillo}, {Hanlon}, {Topinka},
+  {LaCluyz{\'e}}, {Savchenko}, {Kann}, {Trotter}, {Covino}, {Kr{\"u}hler},
+  {Greiner}, {McGlynn}, {Murphy}, {Tisdall}, {Meehan}, {Wade}, {McBreen},
+  {Reichart}, {Fugazza}, {Haislip}, {Rossi}, {Schady}, {Elliott}, \&
+  {Klose}}]{2014A&A...567A..84M}
+{Martin-Carrillo}, A., {Hanlon}, L., {Topinka}, M., {LaCluyz{\'e}}, A.~P.,
+  {Savchenko}, V., {Kann}, D.~A., {Trotter}, A.~S., {Covino}, S.,
+  {Kr{\"u}hler}, T., {Greiner}, J., {McGlynn}, S., {Murphy}, D., {Tisdall}, P.,
+  {Meehan}, S., {Wade}, C., {McBreen}, B., {Reichart}, D.~E., {Fugazza}, D.,
+  {Haislip}, J.~B., {Rossi}, A., {Schady}, P., {Elliott}, J., \& {Klose}, S.
+  2014, \aap, 567, A84. \eprint{1405.7396}
 
-\bibitem{2016arXiv160606124P}
-B.~{Patricelli} et~al.
-\newblock {Prospects for joint observations of gravitational waves and gamma
-  rays from merging neutron star binaries}.
-\newblock arXiv:1606.06124.
+\bibitem[{{Patricelli} et~al.(2016){Patricelli}, {Razzano}, {Cella},
+  {Fidecaro}, {Pian}, {Branchesi}, \& {Stamerra}}]{2016arXiv160606124P}
+{Patricelli}, B., {Razzano}, M., {Cella}, G., {Fidecaro}, F., {Pian}, E.,
+  {Branchesi}, M., \& {Stamerra}, A. 2016, ArXiv e-prints. \eprint{1606.06124}
 
-\bibitem{PhysRevD.93.024013}
-Leo~P. Singer and Larry~R. Price.
-\newblock Rapid bayesian position reconstruction for gravitational-wave
-  transients.
-\newblock {\em Phys.~Rev.~D}, 93:024013, Jan 2016.
+\bibitem[{{Singer} \& {Price}(2016)}]{2016PhRvD..93b4013S}
+{Singer}, L.~P., \& {Price}, L.~R. 2016, \prd, 93, 024013. \eprint{1508.03634}
 
 \end{thebibliography}
