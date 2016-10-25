@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.11)  18 OCT 2016 14:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.11)  25 OCT 2016 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -796,130 +796,131 @@ LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <9> not available
 (ASP) Author Postal Code: 75013
 (ASP) Author Country: France
 (ASP) End Author
-Package epstopdf Info: Source file: <SP_f1.eps>
+Package epstopdf Info: Source file: <P7-1_f1.eps>
 (epstopdf)                    date: 2016-10-18 11:44:59
 (epstopdf)                    size: 2534156 bytes
-(epstopdf)             Output file: <SP_f1-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-18 13:32:47
+(epstopdf)             Output file: <P7-1_f1-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-25 15:25:15
 (epstopdf)                    size: 37240 bytes
-(epstopdf)             Command: <repstopdf --outfile=SP_f1-eps-converted-to.pdf
- SP_f1.eps>
+(epstopdf)             Command: <repstopdf --outfile=P7-1_f1-eps-converted-to.p
+df P7-1_f1.eps>
 (epstopdf)             \includegraphics on input line 64.
 Package epstopdf Info: Output file is already uptodate.
-<SP_f1-eps-converted-to.pdf, id=9, 508.90125pt x 189.70876pt>
-File: SP_f1-eps-converted-to.pdf Graphic file (type pdf)
+<P7-1_f1-eps-converted-to.pdf, id=9, 508.90125pt x 189.70876pt>
+File: P7-1_f1-eps-converted-to.pdf Graphic file (type pdf)
 
-<use SP_f1-eps-converted-to.pdf>
-Package pdftex.def Info: SP_f1-eps-converted-to.pdf used on input line 64.
+<use P7-1_f1-eps-converted-to.pdf>
+Package pdftex.def Info: P7-1_f1-eps-converted-to.pdf used on input line 64.
 (pdftex.def)             Requested size: 356.22844pt x 132.79521pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./SP_f1-eps-converted-
-to.pdf>]
-Package epstopdf Info: Source file: <SC_f2.eps>
-(epstopdf)                    date: 2016-10-18 12:37:31
-(epstopdf)                    size: 4551630 bytes
-(epstopdf)             Output file: <SC_f2-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-18 13:32:49
-(epstopdf)                    size: 69695 bytes
-(epstopdf)             Command: <repstopdf --outfile=SC_f2-eps-converted-to.pdf
- SC_f2.eps>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./P7-1_f1-eps-converte
+d-to.pdf>]
+Package epstopdf Info: Source file: <P7-1_f2.eps>
+(epstopdf)                    date: 2016-10-18 12:37:28
+(epstopdf)                    size: 2088239 bytes
+(epstopdf)             Output file: <P7-1_f2-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-25 15:25:16
+(epstopdf)                    size: 113261 bytes
+(epstopdf)             Command: <repstopdf --outfile=P7-1_f2-eps-converted-to.p
+df P7-1_f2.eps>
 (epstopdf)             \includegraphics on input line 143.
 Package epstopdf Info: Output file is already uptodate.
 
-<SC_f2-eps-converted-to.pdf, id=50, 733.74126pt x 532.99126pt>
-File: SC_f2-eps-converted-to.pdf Graphic file (type pdf)
+<P7-1_f2-eps-converted-to.pdf, id=50, 599.23875pt x 576.1525pt>
+File: P7-1_f2-eps-converted-to.pdf Graphic file (type pdf)
 
-<use SC_f2-eps-converted-to.pdf>
-Package pdftex.def Info: SC_f2-eps-converted-to.pdf used on input line 143.
-(pdftex.def)             Requested size: 146.74565pt x 106.59636pt.
-Package epstopdf Info: Source file: <IN_f2.eps>
-(epstopdf)                    date: 2016-10-18 12:37:28
-(epstopdf)                    size: 2088239 bytes
-(epstopdf)             Output file: <IN_f2-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-18 13:32:51
-(epstopdf)                    size: 113261 bytes
-(epstopdf)             Command: <repstopdf --outfile=IN_f2-eps-converted-to.pdf
- IN_f2.eps>
+<use P7-1_f2-eps-converted-to.pdf>
+Package pdftex.def Info: P7-1_f2-eps-converted-to.pdf used on input line 143.
+(pdftex.def)             Requested size: 119.84563pt x 115.22845pt.
+Package epstopdf Info: Source file: <P7-1_f3.eps>
+(epstopdf)                    date: 2016-10-18 12:37:31
+(epstopdf)                    size: 4551630 bytes
+(epstopdf)             Output file: <P7-1_f3-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-25 15:25:18
+(epstopdf)                    size: 69689 bytes
+(epstopdf)             Command: <repstopdf --outfile=P7-1_f3-eps-converted-to.p
+df P7-1_f3.eps>
 (epstopdf)             \includegraphics on input line 144.
 Package epstopdf Info: Output file is already uptodate.
 
-<IN_f2-eps-converted-to.pdf, id=51, 599.23875pt x 576.1525pt>
-File: IN_f2-eps-converted-to.pdf Graphic file (type pdf)
+<P7-1_f3-eps-converted-to.pdf, id=51, 733.74126pt x 532.99126pt>
+File: P7-1_f3-eps-converted-to.pdf Graphic file (type pdf)
 
-<use IN_f2-eps-converted-to.pdf>
-Package pdftex.def Info: IN_f2-eps-converted-to.pdf used on input line 144.
-(pdftex.def)             Requested size: 119.84563pt x 115.22845pt.
-Package epstopdf Info: Source file: <FL_f3.eps>
+<use P7-1_f3-eps-converted-to.pdf>
+Package pdftex.def Info: P7-1_f3-eps-converted-to.pdf used on input line 144.
+(pdftex.def)             Requested size: 146.74565pt x 106.59636pt.
+Package epstopdf Info: Source file: <P7-1_f4.eps>
 (epstopdf)                    date: 2016-10-18 12:40:04
 (epstopdf)                    size: 383807 bytes
-(epstopdf)             Output file: <FL_f3-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-18 13:34:22
+(epstopdf)             Output file: <P7-1_f4-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-25 15:25:19
 (epstopdf)                    size: 13779 bytes
-(epstopdf)             Command: <repstopdf --outfile=FL_f3-eps-converted-to.pdf
- FL_f3.eps>
+(epstopdf)             Command: <repstopdf --outfile=P7-1_f4-eps-converted-to.p
+df P7-1_f4.eps>
 (epstopdf)             \includegraphics on input line 171.
 Package epstopdf Info: Output file is already uptodate.
 
-<FL_f3-eps-converted-to.pdf, id=52, 289.08pt x 216.81pt>
-File: FL_f3-eps-converted-to.pdf Graphic file (type pdf)
+<P7-1_f4-eps-converted-to.pdf, id=52, 289.08pt x 216.81pt>
+File: P7-1_f4-eps-converted-to.pdf Graphic file (type pdf)
 
-<use FL_f3-eps-converted-to.pdf>
-Package pdftex.def Info: FL_f3-eps-converted-to.pdf used on input line 171.
+<use P7-1_f4-eps-converted-to.pdf>
+Package pdftex.def Info: P7-1_f4-eps-converted-to.pdf used on input line 171.
 (pdftex.def)             Requested size: 173.44933pt x 130.08699pt.
-Package epstopdf Info: Source file: <SD_f3.eps>
+Package epstopdf Info: Source file: <P7-1_f5.eps>
 (epstopdf)                    date: 2016-10-18 12:40:07
 (epstopdf)                    size: 383817 bytes
-(epstopdf)             Output file: <SD_f3-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-18 13:34:22
+(epstopdf)             Output file: <P7-1_f5-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-25 15:25:19
 (epstopdf)                    size: 13096 bytes
-(epstopdf)             Command: <repstopdf --outfile=SD_f3-eps-converted-to.pdf
- SD_f3.eps>
+(epstopdf)             Command: <repstopdf --outfile=P7-1_f5-eps-converted-to.p
+df P7-1_f5.eps>
 (epstopdf)             \includegraphics on input line 172.
 Package epstopdf Info: Output file is already uptodate.
 
-<SD_f3-eps-converted-to.pdf, id=53, 289.08pt x 216.81pt>
-File: SD_f3-eps-converted-to.pdf Graphic file (type pdf)
+<P7-1_f5-eps-converted-to.pdf, id=53, 289.08pt x 216.81pt>
+File: P7-1_f5-eps-converted-to.pdf Graphic file (type pdf)
 
-<use SD_f3-eps-converted-to.pdf>
-Package pdftex.def Info: SD_f3-eps-converted-to.pdf used on input line 172.
+<use P7-1_f5-eps-converted-to.pdf>
+Package pdftex.def Info: P7-1_f5-eps-converted-to.pdf used on input line 172.
 (pdftex.def)             Requested size: 173.44933pt x 130.08699pt.
- [3 <./SC_f2-eps-converted-to.pdf> <./IN_f2-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <CR_f4.eps>
+ [3 <./P7-1_f2-eps-converted-to.pdf> <./P7-1_f3-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <P7-1_f6.eps>
 (epstopdf)                    date: 2016-10-18 12:43:01
 (epstopdf)                    size: 383811 bytes
-(epstopdf)             Output file: <CR_f4-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-18 13:34:22
+(epstopdf)             Output file: <P7-1_f6-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-25 15:25:20
 (epstopdf)                    size: 15095 bytes
-(epstopdf)             Command: <repstopdf --outfile=CR_f4-eps-converted-to.pdf
- CR_f4.eps>
+(epstopdf)             Command: <repstopdf --outfile=P7-1_f6-eps-converted-to.p
+df P7-1_f6.eps>
 (epstopdf)             \includegraphics on input line 196.
 Package epstopdf Info: Output file is already uptodate.
- <CR_f4-eps-converted-to.pdf, id=66, 289.08pt x 216.81pt>
-File: CR_f4-eps-converted-to.pdf Graphic file (type pdf)
 
-<use CR_f4-eps-converted-to.pdf>
-Package pdftex.def Info: CR_f4-eps-converted-to.pdf used on input line 196.
+<P7-1_f6-eps-converted-to.pdf, id=66, 289.08pt x 216.81pt>
+File: P7-1_f6-eps-converted-to.pdf Graphic file (type pdf)
+
+<use P7-1_f6-eps-converted-to.pdf>
+Package pdftex.def Info: P7-1_f6-eps-converted-to.pdf used on input line 196.
 (pdftex.def)             Requested size: 144.53964pt x 108.40472pt.
-Package epstopdf Info: Source file: <SR_f4.eps>
+Package epstopdf Info: Source file: <P7-1_f7.eps>
 (epstopdf)                    date: 2016-10-18 12:43:04
 (epstopdf)                    size: 761841 bytes
-(epstopdf)             Output file: <SR_f4-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-18 13:34:23
+(epstopdf)             Output file: <P7-1_f7-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-25 15:25:20
 (epstopdf)                    size: 25340 bytes
-(epstopdf)             Command: <repstopdf --outfile=SR_f4-eps-converted-to.pdf
- SR_f4.eps>
+(epstopdf)             Command: <repstopdf --outfile=P7-1_f7-eps-converted-to.p
+df P7-1_f7.eps>
 (epstopdf)             \includegraphics on input line 197.
 Package epstopdf Info: Output file is already uptodate.
 
-<SR_f4-eps-converted-to.pdf, id=67, 433.62pt x 289.08pt>
-File: SR_f4-eps-converted-to.pdf Graphic file (type pdf)
+<P7-1_f7-eps-converted-to.pdf, id=67, 433.62pt x 289.08pt>
+File: P7-1_f7-eps-converted-to.pdf Graphic file (type pdf)
 
-<use SR_f4-eps-converted-to.pdf>
-Package pdftex.def Info: SR_f4-eps-converted-to.pdf used on input line 197.
+<use P7-1_f7-eps-converted-to.pdf>
+Package pdftex.def Info: P7-1_f7-eps-converted-to.pdf used on input line 197.
 (pdftex.def)             Requested size: 173.44492pt x 115.62994pt.
- [4 <./FL_f3-eps-converted-to.pdf> <./SD_f3-eps-converted-to.pdf> <./CR_f4-eps-
-converted-to.pdf> <./SR_f4-eps-converted-to.pdf>] (./proceeding.bbl)
+ [4 <./P7-1_f4-eps-converted-to.pdf> <./P7-1_f5-eps-converted-to.pdf> <./P7-1_f
+6-eps-converted-to.pdf> <./P7-1_f7-eps-converted-to.pdf>] (./proceeding.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
  [5]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
@@ -932,7 +933,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
  7798 strings out of 494977
- 108153 string characters out of 6180182
+ 108223 string characters out of 6180182
  192098 words of memory out of 5000000
  10837 multiletter control sequences out of 15000+600000
  60866 words of font info for 121 fonts, out of 8000000 for 9000
@@ -948,7 +949,7 @@ are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on proceeding.pdf (5 pages, 356225 bytes).
+Output written on proceeding.pdf (5 pages, 356241 bytes).
 PDF statistics:
  136 PDF objects out of 1000 (max. 8388607)
  103 compressed objects within 2 object streams
