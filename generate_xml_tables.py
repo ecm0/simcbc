@@ -361,7 +361,7 @@ if __name__ == "__main__":
             geocent_end_time = random_times[counter_all]
 
             # generate remaining angles randomly
-            iota = 180.0 * rand.random()  # all angles are in degrees
+            iota = math.degrees(math.acos(2.0*rand.random()-1))  # all angles are in degrees
             phi_ref = 360.0 * rand.random()
             psi = 360.0 * rand.random()
 
