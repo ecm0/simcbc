@@ -241,6 +241,7 @@ class Detector(object):
  
 H1 = Detector("H1")
 L1 = Detector("L1")
+V1 = Detector("V1")
     
 def signal_to_noise(hstrain, psd, freq_min, freq_max):
     """
@@ -302,7 +303,7 @@ if __name__ == "__main__":
 
     # parameters
 
-    detectors = [H1, L1]
+    detectors = [H1, L1, V1]
     
     time_from_start = 0  # s
     stride = 3600   # s
