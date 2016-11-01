@@ -310,7 +310,7 @@ if __name__ == "__main__":
     threshold = 4 # SNR selection threshold
     inject_per_file = 10
 
-    approximant = "TaylorT4treePN"
+    approximant = "TaylorT4threePN"
     amplitude_order = 0
     phase_order = -1
     sampling_rate = 1024 # Hz
