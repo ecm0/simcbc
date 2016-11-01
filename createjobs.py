@@ -11,8 +11,8 @@ from glue.ligolw import lsctables
 from glue.ligolw import utils as ligolw_utils
 
 LITTLEHOPE_HOME = os.getcwd()
-LITTLEHOPE_OPTS = '--detector H1 --detector L1 --detector V1 --min-triggers 2 ----snr-threshold 4.0 --trigger-window .5 --reference-psd {home}/psds_2016-17.xml --waveform "TaylorT4threePN"'.format(home=LITTLEHOPE_HOME)
-LITTLEHOPE_OPTS = '--detector H1 --detector L1 --min-triggers 2 --snr-threshold 4.0 --trigger-window 1 --reference-psd {home}/psds_2016-17.xml --waveform "TaylorT4threePN"'.format(home=LITTLEHOPE_HOME)
+LITTLEHOPE_OPTS2 = '--detector H1 --detector L1 --detector V1 --min-triggers 2 --snr-threshold 4.0 --trigger-window 1 --reference-psd {home}/psds_2016-17.xml --waveform "TaylorT4threePN"'.format(home=LITTLEHOPE_HOME)
+LITTLEHOPE_OPTS3 = '--detector H1 --detector L1 --min-triggers 2 --snr-threshold 4.0 --trigger-window .1 --reference-psd {home}/psds_2016-17.xml --waveform "TaylorT4threePN"'.format(home=LITTLEHOPE_HOME)
 CMD_LITTLEHOPE = '{home}/my_bayestar_littlehope {opts} --template-bank {simdir}/{template_file} {simdir}/{mdc_file} -o coinc.xml\n'
 
 LOCALCOINCS_OPTS = '--waveform "TaylorT4threePN" --f-low 30'
@@ -35,9 +35,19 @@ if __name__ == "__main__":
         sys.exit()
 
     if len(sys.argv) > 2:
-        jobsub_opts = sys.argv[2]
+        out_prefix = sys.argv[2]
+    else:
+        out_prefix = ""
+
+    if len(sys.argv) > 3:
+        jobsub_opts = sys.argv[3]
     else:
         jobsub_opts = ""
+
+    if len(sys.argv) > 4:
+        num_ifo = sys.argv[4]
+    else:
+        num_ifo = 2
 
     # loop on coincX.xml
     submission_cmds = []
@@ -46,6 +56,7 @@ if __name__ == "__main__":
         
         # create job dirs
         simdir,_ = os.path.splitext(my_file)
+        simdir = "{}/{}".format(prefix,simdir)
         if not os.path.exists(simdir):
             os.makedirs(simdir)
 
@@ -57,6 +68,11 @@ if __name__ == "__main__":
         
         fullpath_simdir = os.path.abspath(simdir)
 
+        if num_ifo == 2:
+            options = LITTLEHOPE_OPTS2
+        else:
+            options = LITTLEHOPE_OPTS3
+
         # create job scripts
         batch_filename = "{}/batch.sh".format(simdir)
         with open(batch_filename, "w") as batch_script:
@@ -66,7 +82,7 @@ if __name__ == "__main__":
                                                      template_file=tmpl_file,
                                                      simdir=fullpath_simdir,
                                                      home=LITTLEHOPE_HOME,
-                                                     opts=LITTLEHOPE_OPTS))
+                                                     opts=options))
             batch_script.write(CMD_LOCALCOINCS.format(simdir=fullpath_simdir,
                                                       opts=LOCALCOINCS_OPTS))
             # batch_script.write(CMD_PLOT)
