@@ -11,11 +11,11 @@ from glue.ligolw import lsctables
 from glue.ligolw import utils as ligolw_utils
 
 LITTLEHOPE_HOME = os.getcwd()
-LITTLEHOPE_OPTS = '--detector H1 --detector L1 --detector V1 --min-triggers 2 ----snr-threshold 4.0 --trigger-window .5 --reference-psd {home}/psds_2016-17.xml --waveform "TaylorT4twoPN"'.format(home=LITTLEHOPE_HOME)
-LITTLEHOPE_OPTS = '--detector H1 --detector L1 --min-triggers 2 --snr-threshold 4.0 --trigger-window 1 --reference-psd {home}/psds_2016-17.xml --waveform "TaylorT4twoPN"'.format(home=LITTLEHOPE_HOME)
+LITTLEHOPE_OPTS = '--detector H1 --detector L1 --detector V1 --min-triggers 2 ----snr-threshold 4.0 --trigger-window .5 --reference-psd {home}/psds_2016-17.xml --waveform "TaylorT4threePN"'.format(home=LITTLEHOPE_HOME)
+LITTLEHOPE_OPTS = '--detector H1 --detector L1 --min-triggers 2 --snr-threshold 4.0 --trigger-window 1 --reference-psd {home}/psds_2016-17.xml --waveform "TaylorT4threePN"'.format(home=LITTLEHOPE_HOME)
 CMD_LITTLEHOPE = '{home}/my_bayestar_littlehope {opts} --template-bank {simdir}/{template_file} {simdir}/{mdc_file} -o coinc.xml\n'
 
-LOCALCOINCS_OPTS = '--waveform "TaylorT4twoPN" --f-low 30'
+LOCALCOINCS_OPTS = '--waveform "TaylorT4threePN" --f-low 30'
 CMD_LOCALCOINCS = 'bayestar_localize_coincs {opts} coinc.xml\n'
 CMD_PLOT = 'for f in *.fits.gz; do bayestar_plot_allsky $f --contour 90 --radec 0.0 0.0 -o ${f%.*}.png; done\n'
 CMD_JOBSUB = '/opt/sge/bin/lx24-amd64/qsub -N {} -o {} -e {} {} {}'
