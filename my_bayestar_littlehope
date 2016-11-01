@@ -32,6 +32,9 @@ from __future__ import division
 __author__ = "Leo Singer <leo.singer@ligo.org>"
 
 
+#import random
+#random.seed(20161031)
+
 # Determine list of known detectors for command line arguments.
 import lal
 available_ifos = sorted(det.frDetector.prefix
@@ -328,12 +331,21 @@ def inject(hplus, hcross, ifo, psd):
     # Generate colored noise
     x = filter.colored_noise(epoch, data_duration, sample_rate, psd)
 
+    #fid = open("noise_{}.txt".format(ifo),"w")
+    #x.data.data.tofile(fid," ")
+    #fid.close()
+    
     # Project injection for this detector.
     detector = lalsimulation.DetectorPrefixToLALDetector(ifo)
     lalsimulation.SimInjectDetectorStrainREAL8TimeSeries(
         x, hplus, hcross,
         ra, dec, psi,
         detector, None)
+
+    print "RA={} dec={} psi={} sample_rate={} epoch={}".format(ra,dec,psi,sample_rate,epoch)
+    #fid = open("sig_plus_noise_{}.txt".format(ifo),"w")
+    #x.data.data.tofile(fid," ")
+    #fid.close()
 
     # Done!
     return x
