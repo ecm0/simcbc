@@ -316,7 +316,7 @@ if __name__ == "__main__":
     phase_order = -1
     sampling_rate = 1024 # Hz
     segment_duration = 64 # s
-    freq_min = 10 # Hz
+    freq_min = 30 # Hz
     freq_max = sampling_rate/2.0
 
     # create new sim and sngl tables
