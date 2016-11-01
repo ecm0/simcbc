@@ -53,7 +53,7 @@ bayestar_plot_allsky 0.toa_phoa_snr.fits.gz --contour 90 --radec long lat -o sky
    Note: skymap computation does not work at CC Lyon (skymap files are
    produced but are empty files).
    To create skymaps, run ./createskymaps.sh on your computer
-   To create a sim summary, run ./createsummary.sh
+   To create a sim summary, run ./create_datafile_GWsources_infos.sh
 
 
 export PATH="$HOME/local/bin:${THRONG_DIR}/bin:$PATH"
