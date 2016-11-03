@@ -46,9 +46,10 @@ bayestar_plot_allsky 0.toa_phoa_snr.fits.gz --contour 90 --radec long lat -o sky
    Set up the environment [see .bashrc below]
    Install healpy (v 1.9.0) [see below]
 
-   Store all MDC files produced at step 3. into a single folder mdcs/
-   Generate batch jobs with:   createjobs.py mdcs/ "-l s_rss=10G"
-   This creates folders mdcXX/ and a script jobsubmission.sh
+   Store all MDC and template files produced at step 3. into a single folder sim_XXXX/orig_files
+   Generate batch jobs with:   
+        createjobs.py sim_XXXX/orig_files sim_XXXX "-l s_rss=10G" 3
+   This creates folders sim_XXXX/mdcXX and a script sim_XXXX/jobsubmission.sh
    Submit jobs to the queue with ./jobsubmission.sh
    To check that jobs are in the queue: qstat
    Note: skymap computation does not work at CC Lyon (skymap files are
