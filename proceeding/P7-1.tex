@@ -47,28 +47,34 @@ INTEGRAL mission. This study is similar to that of \citep{2016arXiv160606124P} d
 
 \section*{Monte-Carlo simulation of gravitational-wave events from neutron-star binary mergers}
 
-We start with a simulated catalogue of 6 millions Milky Way-like galaxies
+We produced a simulated catalogue of 6 millions Milky Way-like galaxies
 distributed to $z\sim 0.12$. To those galaxies, we associate binary neutron star
 (BNS) mergers with mass distribution and rate $R=23.5 \mathrm{Myr}^{-3}$ per galaxy
 according to Model A (solar metallicity) of
 \citep{2012ApJ...759...52D}. This results in a population of 14\,000
-mergers for a $100$ year simulation.
+mergers for a $100$-year simulation.
 
-We simulate GW signals corresponding to the binary mergers (using model
-``TaylorT4'') and inject them into Gaussian noise coloured according to the
-``optimistic'' power-spectral density anticipated for the 2nd LIGO/Virgo run O2
-\citep{2016LRR....19....1A}. We select signals with $\mathrm{SNR}_{\mathrm{combined}} > 9$.
-corresponding to a false-alarm rate $\mathrm{FAR} < 1/\mathrm{month}$. The
-average range BNS is 150 Mpc for this selection.
+The GW signals corresponding to the binary mergers was simulated using the
+\texttt{TaylorT4} model and injected into Gaussian noise coloured according to
+best sensitivity curves anticipated for the 2nd LIGO/Virgo run O2
+\citep{2016LRR....19....1A}. We distribute those events randomly in time over
+the expected period of O2 from Nov 2016 to May 2017. We recover the signal with
+a simplified matched-filtering algorithm\citep{2016PhRvD..93b4013S} in the case
+of the LIGO-only two-detector network, and that of the LIGO-Virgo three-detector
+network. We select the GW events with $\mathrm{SNR}_{\mathrm{combined}} > 9$
+corresponding to a false-alarm rate $\mathrm{FAR} < 1/\mathrm{month}$.  With
+this selection cut, BNS merger can be recovered down to an horizon distance of
+about $150$ Mpc and $50$ Mpc for the LIGO and Virgo detectors respectively.
+This results in 170 (resp. 192) selected BNS merger signals over 100
+years which corresponds to $\sim 1$ mergers over the 6-month duration of O2.
 
-This results in 192 selected merger signals over 100 years which corresponds to
-$\sim 1$ merger over the 6-month duration of O2. We distribute those events
-randomly in time over the expected period of O2 from Nov 2016 to May 2017. We
-recover GW signals using matched-filtering techniques and reconstruct the
+We recover GW signals using matched-filtering techniques and reconstruct the
 posterior skymaps giving the position of the source using the BAYESTAR pipeline
-\citep{2016PhRvD..93b4013S}.  With three detectors, the position uncertainty is
-appreciably diminished and contained in a window of 300-1700 square degrees getting 
-rid off the very badly constrained events positions. 
+\citep{2016PhRvD..93b4013S}.  With two detectors, the position uncertainty is
+contained in a window of 700-2100 square degrees, while with three detectors, it
+is appreciably diminished to a 300-1700 square-degree window. The latter
+estimate is obtained using the 70 \% fraction of events where the position
+estimation converged.
 
 \section*{Electromagnetic emission model from neutron-star binary mergers}
 
@@ -173,12 +179,13 @@ time, in total 80\% of the true source locations are covered.}
   	\includegraphics[scale=.5]{P7-1_f3.eps}
   	\includegraphics[scale=.4]{P7-1_f4.eps}
 
-  	\caption{(\textit{Left}) Cumulative distribution of the
-    fraction of the LIGO/Virgo localization region accessible to
-    INTEGRAL pointed follow-up observation in the LIGO/Virgo O2
-    run. (\textit{Right}) Significance distribution on detected
-    sources depending on time delay after the prompt emission. Dotted
-    lines correspond to the model assuming realistic distribution of short GRB luminosities. \textcolor{blue}{Change figures}}
+  	\caption{(\textit{Left}) Cumulative distribution of the fraction of the
+          LIGO/Virgo localization region accessible to INTEGRAL pointed
+          follow-up observation in the LIGO/Virgo O2 run. (\textit{Right})
+          Significance distribution on detected sources depending on time delay
+          after the prompt emission. Dotted lines correspond to the model
+          assuming realistic distribution of short GRB
+          luminosities. \textcolor{blue}{Change figures}}
     \label{covered_region}
 \end{figure}
 
