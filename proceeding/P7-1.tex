@@ -1,4 +1,4 @@
- \documentclass[11pt]{article}
+\documentclass[11pt]{article}
 
 \newcommand{\ECM}[1] {\textbf{\textcolor{magenta}{#1}}}
 \newcommand{\vs}[1] {\textbf{\textcolor{red}{#1}}}
@@ -134,9 +134,29 @@ this spectrum to the off-axis case using Model~I in \citep{2016arXiv160606124P}.
 
 \section*{The INTEGRAL mission and possible follow-up strategies}
 
-The INTEGRAL satellite \citep{integral} carries a combination of pointing instruments (IBIS which
-includes ISGRI, JEM-X, OMC and SPI), covering wide energy range from 3 keV to 10
-MeV with a field of view up to 900 deg$^2$. SPI and IBIS are associated with
+\begin{figure}
+  \centering
+    \includegraphics[scale=.6]{P7-1_f1.eps}
+    \includegraphics[scale=.6]{P7-1_f2.eps}\\
+    \includegraphics[scale=.5]{P7-1_f3.eps}
+    \includegraphics[scale=.4]{P7-1_f4.eps}
+    \caption{(\textit{Top--left}) Cumulative distribution of the detected
+      fluences by INTEGRAL in the LIGO/Virgo O2 run.(\textit{Top--right})
+      Cumulative distribution of the significance in the INTEGRAL/SPI-ACS
+      instrument.  (\textit{Bottom--left}) Cumulative distribution of the
+      fraction of the LIGO/Virgo localization region accessible to INTEGRAL
+      pointed follow-up observation in the LIGO/Virgo O2
+      run. (\textit{Bottom--right}) Significance distribution on detected
+      sources depending on time delay after the prompt emission.}
+    \label{fluence_significance}
+\end{figure}
+
+The INTEGRAL satellite \citep{integral} carries a combination of pointing
+instruments (IBIS which includes ISGRI, JEM-X, OMC and SPI), covering wide
+energy range from 3 keV to 10 MeV. IBIS/ISGRI can achieve a sensitivity of $3.7
+\times 10^{-11}$~erg~cm$^2$~s in 20-60 keV in an area of about 1000~deg$^{2}$,
+with a continuous 100~ks exposure, reaching deeper than any other hard X-ray
+telescope in such an extended sky region. SPI and IBIS are associated with
 SPI-ACS and IBIS-Veto that are shields made of BGO scintillator with
 sufficiently collecting area that they can be considered as instruments in their
 own right.  This allows a \textit{passive} follow-up using the near all-sky
@@ -146,116 +166,73 @@ followed actively.  Typical latency of INTEGRAL observations is about 1 day but
 may be lower in some circumstances. We compute the flux at several moments of
 time, and compare it with ISGRI sensitivity in 100~ks exposure.
 
-\section*{Results}
-
 \subsection*{Prompt -- Passive follow-up}
 
-\begin{figure}
-	\centering
-    \includegraphics[scale=.6]{P7-1_f1.eps}
-    \includegraphics[scale=.6]{P7-1_f2.eps}
-    \caption{(\textit{Left}) Cumulative distribution of the
-      detected fluences by INTEGRAL in the LIGO/Virgo O2
-      run.(\textit{Right}) Cumulative distribution of the significance
-      in the INTEGRAL/SPI-ACS instrument.}
-    \label{fluence_significance}
-\end{figure}
-
-Choosing an isotropic sky distribution for the passive follow-up
-emission (passive follow-up) of our GW events, we show that in every
-case where the Earth is within the GRB emission cone, INTEGRAL detects
-prompt emission with significance at least 50~sigma.  The rate of
-detection is 0.02 in the 6 months of O2 for GW alerts ($\mathrm{SNR}
-\geq 9$). Using SPI-ACS, IBIS/Veto, and IBIS it is possible to derive a
-crude localization of these events. The accuracy of this localization
-strongly depends on the true source location, and ranges from 5\% to
-about 50\% of the sky. Combining this observation 
-with  LIGO/Virgo localization can, in some cases, result in a much more smaller 
-sky region than the LIGO/Virgo observation alone.
+Choosing an isotropic sky distribution for the passive follow-up emission
+(passive follow-up) of our GW events, we show that in every case where the Earth
+is within the GRB emission cone, INTEGRAL detects prompt emission with
+significance at least 50~sigma.  The rate of detection is 0.02 in the 6 months
+of O2 for GW alerts ($\mathrm{SNR} \geq 9$). Using SPI-ACS, IBIS/Veto, and IBIS
+it is possible to derive a crude localization of these events. The accuracy of
+this localization strongly depends on the true source location, and ranges from
+5\% to about 50\% of the sky. Combining this observation with LIGO/Virgo
+localization can, in some cases, result in a much more smaller sky region than
+the LIGO/Virgo observation alone.
 
 \subsection*{Afterglow -- Instrument repointing}
 
-If we want to follow-up the afterglow emission, we will need to
-re-point the on-board instruments.  INTEGRAL can point only to a
-fraction of the GW localization region. For each event we compute the
-total localization probability within the observable region, and find
-that in 40\% of the cases 80\% of the localization is
-observed. However, if the complete available region is followed up
-every time, in total 80\% of the true source locations are covered.
+If we want to follow-up the afterglow emission, we will need to re-point the
+on-board instruments.  INTEGRAL can point only to a fraction of the GW
+localization region. For each event we compute the total localization
+probability within the observable region, and find that in 40\% of the cases
+80\% of the localization is observed. However, if the complete available region
+is followed up every time, in total 80\% of the true source locations are
+covered.
 
-\begin{figure}[!ht]
-	\centering
-  	\includegraphics[scale=.5]{P7-1_f3.eps}
-  	\includegraphics[scale=.4]{P7-1_f4.eps}
+Using the same assumptions as in the case of the prompt emission, We find that
+the expected rate of 5~sigma detections is only about 0.001 events in 6 months
+of O2. However, the rate of detections is very sensitive to the GRB energetics.
 
-  	\caption{(\textit{Left}) Cumulative distribution of the fraction of the
-          LIGO/Virgo localization region accessible to INTEGRAL pointed
-          follow-up observation in the LIGO/Virgo O2 run. (\textit{Right})
-          Significance distribution on detected sources depending on time delay
-          after the prompt emission.}
-    \label{covered_region}
-\end{figure}
+We therefore focus on another possibility, that 10\% of the events launch much
+more energetic outflow, in agreement with the luminosities observed in real
+short GRBs. In this case we expect about 0.01 events seen in 6 months. We
+stress that the afterglow prediction is particularly sensitive to assumptions on
+rather uncertain source model, and we assume only one, yet realistic, option.
 
-Using the same assumptions as in the case of the prompt emission,
-We find that the expected rate of 5~sigma detections is only about 0.001 events 
-in 6 months of O2. However, the rate of detections is very sensitive to the GRB energetics.  We
-therefore focus on another possibility, that 10\% of the events launch
-much more energetic outflow, in agreement with the luminosities observed
-in real short GRBs. In this case we expect about 0.01 events seen in 6
-months.
+% The temporal profile of the afterglow greatly depends on the angle between the
+% jet and the line of sight: light curves of the source observed at larger angles
+% reach their maximum at a later moment. Assuming the jet is aligned with the
+% binary rotation axis, the measurement of the inclination from the LIGO/Virgo
+% data can be used to guide the follow-up observation. However, at these early
+% stages of LIGO and Virgo operations binary inclination cannot be measured with
+% sufficient precision.
 
-We stress that the afterglow prediction is particularly sensitive to
-assumptions on rather uncertain source model, and we assume only
-one, yet realistic, option.
+Afterglows can be seen from binaries at a wider range of inclination angles than
+the prompt emission. While we cannot reliably characterize the shape of the
+observed binary inclination distribution due to limited statistics, in our
+sample, equivalent to 200 times the projected LIGO O2 run, we identify 5
+synthetic hard X-ray afterglow counterparts, among them 2 with the inclination
+angle larger than 10 degrees which would represent so-called ``orphan
+afterglows''.
 
-IBIS/ISGRI can achieve sensitivity of $3.7 \times 10^{-11}$~erg~cm$^2$~s
-in 20-60 keV in an area of about 1000~deg$^{2}$, with a continous
-100~ks exposure, reaching deeper than any other hard X-ray telescope
-in such an extended sky region. It make INTEGRAL well-prepared to
-search for new and unexpected hard X-ray counterpars of the gravitational wave
-sources detected by LIGO/Virgo.
-
-The temporal profile of the afterglow greately depends on the angle
-between the jet and the line of sight: light curves of the source
-observed at larger angles reach the maximum at a later
-moment. Assuming the jet is aligned with the binary rotation axis, the
-measurement of the inclination from the LIGO/Virgo data can be used to
-guide the follow-up observation. However, at these early stages of LIGO and
-Virgo operations binary inclination can not be measured with sufficient
-precision. \vs{specify the precision, so I can compare to the
-  dependencies}.
-
-Afterglows can be seen from binaries at a wider range of inclination angles than the prompt emission.
-We can not reliably characterize the shape of the observed binary
-inclination distribution, limited by the simulation sample
-statistics. In our sample, equivalent to 200 times the projected LIGO
-O2 run, we identify 5 synthetic hard X-ray afterglow counterparts,
-among them 2 with the inclination angle larger than 10 degrees - the orphan
-afterglows.
-
-\ECM{What is the inclination distribution of the 40 \% binaries whose GW error
-  box can be covered to 80 \% ?}
-\vs{the same exactly, why would it be different? does the shape of the LIGO/Virgo localization region depend on the inclination?
-}
-
-
-\vspace{10mm}
+\vspace{3mm}
 \noindent {\normalsize \textbf{Acknowledgements}}
 
 %----------------------------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS
 %----------------------------------------------------------------------------------------
 
-{\linespread{0.1} \footnotesize This research was supported European Union's
-  Horizon 2020 research and innovation programme under grant agreement No
-  653477. The authors would like to thank the LIGO Scientific Collaboration and
-  Virgo Collaboration for giving access to the simulation software used here,
-  Barbara Patricelli for sharing her simulations with us.}
+{\linespread{0.1} \footnotesize \noindent This research was supported European
+  Union's Horizon 2020 research and innovation programme under grant agreement
+  No 653477. The authors would like to thank the LIGO Scientific Collaboration
+  and Virgo Collaboration for giving access to the simulation software used
+  here, Barbara Patricelli for sharing her data with us.}
 
 %----------------------------------------------------------------------------------------
 %	REFERENCES
 %----------------------------------------------------------------------------------------
 
+\vspace*{-5mm}
 {\footnotesize
 \bibliographystyle{asp2014.bst} % Plain referencing style
 \bibliography{P7-1.bib} % Use the example bibliography file sample.bib
