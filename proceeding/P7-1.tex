@@ -127,10 +127,12 @@ found to be related to the bright gamma-ray afterglow, observed by Fermi/LAT in
 the energy range above 100 MeV with a consistent power-law spectrum with index
 -2.
 
-In this study, we assume that every BNS merger produces a hard X-ray afterglow
-with a spectrum similar to GRB120711A, but rescaled to the total EM
-luminosity of a typical short GRB - $10^{50}~$erg$^{-2}~$s$^{-1}$. We extrapolate
-this spectrum to the off-axis case using Model~I in \citep{2016arXiv160606124P}.
+In this study, we assume that every BNS merger produces a hard X-ray
+afterglow with a spectrum similar to GRB120711A, but rescaled to the
+total EM luminosity of a typical short GRB -
+$10^{50}~$erg$^{-2}~$s$^{-1}$. We extrapolate this spectrum to the
+off-axis case using Model~I in \citep{2016arXiv160606124P}, assuming
+$\Gamma_0$=200 and $t_{dec}=100~$s.
 
 \section*{The INTEGRAL mission and possible follow-up strategies}
 
@@ -138,8 +140,8 @@ this spectrum to the off-axis case using Model~I in \citep{2016arXiv160606124P}.
   \centering
     \includegraphics[scale=.6]{P7-1_f1.eps}
     \includegraphics[scale=.6]{P7-1_f2.eps}\\
-    \includegraphics[scale=.5]{P7-1_f3.eps}
-    \includegraphics[scale=.4]{P7-1_f4.eps}
+    \includegraphics[scale=.6]{P7-1_f3.eps}
+    \includegraphics[scale=.6]{P7-1_f4.eps}
     \caption{(\textit{Top--left}) Cumulative distribution of the detected
       fluences by INTEGRAL in the LIGO/Virgo O2 run.(\textit{Top--right})
       Cumulative distribution of the significance in the INTEGRAL/SPI-ACS
@@ -147,17 +149,16 @@ this spectrum to the off-axis case using Model~I in \citep{2016arXiv160606124P}.
       fraction of the LIGO/Virgo localization region accessible to INTEGRAL
       pointed follow-up observation in the LIGO/Virgo O2
       run. (\textit{Bottom--right}) Significance distribution on detected
-      sources depending on time delay after the prompt emission.}
+      sources depending on time delay after the prompt emission, only in the case of joint LIGO/Virgo operation.}
     \label{fluence_significance}
 \end{figure}
 
 The INTEGRAL satellite \citep{integral} carries a combination of pointing
-instruments (IBIS which includes ISGRI, JEM-X, OMC and SPI), covering wide
-energy range from 3 keV to 10 MeV. IBIS/ISGRI can achieve a sensitivity of $3.7
-\times 10^{-11}$~erg~cm$^2$~s in 20-60 keV in an area of about 1000~deg$^{2}$,
+instruments (IBIS, JEM-X, OMC and SPI), covering wide
+energy range from 3 keV to 10 MeV. Low-energy subsystem of IBIS, - ISGRI can achieve a sensitivity of $3.7 \times 10^{-11}$~erg~cm$^2$~s in 20-60 keV in an area of about 1000~deg$^{2}$,
 with a continuous 100~ks exposure, reaching deeper than any other hard X-ray
 telescope in such an extended sky region. SPI and IBIS are associated with
-SPI-ACS and IBIS-Veto that are shields made of BGO scintillator with
+SPI-ACS and IBIS/Veto that are shields made of BGO scintillator with
 sufficiently collecting area that they can be considered as instruments in their
 own right.  This allows a \textit{passive} follow-up using the near all-sky
 instruments SPI-ACS and IBIS-Veto and an \textit{active} follow-up where the
@@ -168,21 +169,23 @@ time, and compare it with ISGRI sensitivity in 100~ks exposure.
 
 \subsection*{Prompt -- Passive follow-up}
 
-Choosing an isotropic sky distribution for the passive follow-up emission
-(passive follow-up) of our GW events, we show that in every case where the Earth
-is within the GRB emission cone, INTEGRAL detects prompt emission with
-significance at least 50~sigma.  The rate of detection is 0.02 in the 6 months
-of O2 for GW alerts ($\mathrm{SNR} \geq 9$). Using SPI-ACS, IBIS/Veto, and IBIS
-it is possible to derive a crude localization of these events. The accuracy of
-this localization strongly depends on the true source location, and ranges from
-5\% to about 50\% of the sky. Combining this observation with LIGO/Virgo
-localization can, in some cases, result in a much more smaller sky region than
-the LIGO/Virgo observation alone.
+Choosing an isotropic sky distribution for the passive follow-up
+emission (passive follow-up) of our GW events, we show that in every
+case where the Earth is within the GRB emission cone, INTEGRAL detects
+prompt emission with significance at least 50~sigma. In the LIGO LH
+configuration (or LIGO/Virgo LVH) the rate of detection is 0.02
+(0.025) in the 6 months of O2 for GW alerts ($\mathrm{SNR} \geq
+9$). Using SPI-ACS, IBIS/Veto, and IBIS it is possible to derive a
+crude localization of these events. The accuracy of this localization
+strongly depends on the true source location, and ranges from 5\% to
+about 50\% of the sky. Combining this observation with LIGO/Virgo
+localization can, in some cases, result in a much constrained sky
+region than the LIGO/Virgo observation alone.
 
 \subsection*{Afterglow -- Instrument repointing}
 
 If we want to follow-up the afterglow emission, we will need to re-point the
-on-board instruments.  INTEGRAL can point only to a fraction of the GW
+on-board instruments. INTEGRAL can point only to a fraction of the GW
 localization region. For each event we compute the total localization
 probability within the observable region, and find that in 40\% of the cases
 80\% of the localization is observed. However, if the complete available region
@@ -207,13 +210,13 @@ rather uncertain source model, and we assume only one, yet realistic, option.
 % stages of LIGO and Virgo operations binary inclination cannot be measured with
 % sufficient precision.
 
-Afterglows can be seen from binaries at a wider range of inclination angles than
-the prompt emission. While we cannot reliably characterize the shape of the
-observed binary inclination distribution due to limited statistics, in our
-sample, equivalent to 200 times the projected LIGO O2 run, we identify 5
-synthetic hard X-ray afterglow counterparts, among them 2 with the inclination
-angle larger than 10 degrees which would represent so-called ``orphan
-afterglows''.
+Afterglows can be seen from binaries at a wider range of inclination
+angles than the prompt emission. While we cannot reliably characterize
+the shape of the observed binary inclination distribution due to
+limited statistics, in our sample, equivalent to 200 times the
+projected LIGO O2 run, we identify 5 synthetic hard X-ray afterglow
+counterparts, among them 2 with the inclination angle larger than 10
+degrees which would represent so-called ``orphan afterglows''.
 
 \vspace{3mm}
 \noindent {\normalsize \textbf{Acknowledgements}}
