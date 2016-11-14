@@ -1,0 +1,31 @@
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{{Abbott} et~al.(2016)}]{2016LRR....19....1A}
+{Abbott}, B.~P., et~al. 2016, Living Reviews in Relativity, 19.
+  \eprint{1304.0670}
+
+\bibitem[{{Band} et~al.(1993)}]{1993ApJ...413..281B}
+{Band}, D., et~al. 1993, \apj, 413, 281
+
+\bibitem[{{Dominik} et~al.(2012)}]{2012ApJ...759...52D}
+{Dominik}, M., et~al. 2012, \apj, 759, 52. \eprint{1202.4901}
+
+\bibitem[{{Gruber} et~al.(2014)}]{2014ApJS..211...12G}
+{Gruber}, D., et~al. 2014, \apjs, 211, 12. \eprint{1401.5069}
+
+\bibitem[{{Patricelli} et~al.(2016)}]{2016arXiv160606124P}
+{Patricelli}, B., et~al. 2016, ArXiv e-prints. \eprint{1606.06124}
+
+\bibitem[{{Singer} \& {Price}(2016)}]{2016PhRvD..93b4013S}
+{Singer}, L.~P., \& {Price}, L.~R. 2016, \prd, 93, 024013. \eprint{1508.03634}
+
+\bibitem[{{Winkler} et~al.(2003){Winkler}, {Courvoisier}
+  et~al.}]{2003A&A...411L...1W}
+{Winkler}, C., {Courvoisier}, T.~J.-L., et~al. 2003, \aap, 411, L1
+
+\end{thebibliography}
