@@ -1,13 +1,10 @@
 \documentclass[11pt]{article}
 
-\newcommand{\ECM}[1] {\textbf{\textcolor{magenta}{#1}}}
-\newcommand{\vs}[1] {\textbf{\textcolor{red}{#1}}}
+%\newcommand{\ECM}[1] {\textbf{\textcolor{magenta}{#1}}}
+%\newcommand{\vs}[1] {\textbf{\textcolor{red}{#1}}}
 
 % Do not use packages other than asp2014. 
 \usepackage{asp2014}
-
-% TO BE REMOVED !
-\usepackage{color}
 
 \aspSuppressVolSlug
 \resetcounters
@@ -32,15 +29,12 @@ Observatoire de Paris, Sorbonne Paris Cit\'e, Paris, France; \email{philippe.bac
   run, tenths of gravitational wave signals from binary black hole mergers are
   anticipated in upcoming LIGO Virgo science runs. Finding an electromagnetic
   counterpart from compact binary merger events would be a capital achievement.
-%if we want to solve some raised issues from the September 2015 event. 
   We evaluate the ability of current wide-field X- and gamma-ray telescopes
   aboard INTEGRAL to find such counterparts thanks to an end-to-end simulation
   for estimating the fraction of the sources that can be followed up and/or
   detected.
 \end{abstract}
 
-%\textcolor{blue}{Have to be changed in the future version of the proceeding} \\
-%\textcolor{magenta}{Can be removed or reformulated in the future version of the proceeding} \\
  
 On September 14, 2015, the two LIGO interferometers realized the first direct detection of
 gravitational waves (GW). A next step would be to associate an electromagnetic (EM)
@@ -52,7 +46,7 @@ INTEGRAL mission. This study is similar to that of \citep{2016arXiv160606124P} d
 
 We produced a simulated catalogue of 6 millions Milky Way-like galaxies
 distributed to $z\sim 0.12$. To those galaxies, we associate binary neutron star
-(BNS) mergers with mass distribution and rate $R=23.5 \mathrm{Myr}^{-3}$ per galaxy
+(BNS) mergers with same mass distribution and rate $R=23.5 \mathrm{Myr}^{-3}$ per galaxy
 according to Model A (solar metallicity) of
 \citep{2012ApJ...759...52D}. This results in a population of 14\,000
 mergers for a $100$-year simulation.
@@ -62,7 +56,7 @@ The GW signals corresponding to the binary mergers was simulated using the
 best sensitivity curves anticipated for the 2nd LIGO/Virgo run O2
 \citep{2016LRR....19....1A}. We distribute those events randomly in time over
 the expected period of O2 from Nov 2016 to May 2017. We recover the signal with
-a simplified matched-filtering algorithm\citep{2016PhRvD..93b4013S} in the case
+a simplified matched-filtering algorithm \citep{2016PhRvD..93b4013S} in the case
 of the LIGO-only two-detector network, and that of the LIGO-Virgo three-detector
 network. We select the GW events with $\mathrm{SNR}_{\mathrm{combined}} > 9$
 corresponding to a false-alarm rate $\mathrm{FAR} < 1/\mathrm{month}$.  With
@@ -94,7 +88,7 @@ progressively more isotropic.
 
 In our simulation we assume that every BNS merger is associated with a short
 gamma-ray burst. We simulate synthetic prompt GRB and a hard X-ray afterglow,
-assuming the following simplified model.
+assuming the following simplified model. 
 
 \subsection*{Prompt emission}
 
@@ -103,7 +97,7 @@ is a variant of the Band model \citep{1993ApJ...413..281B} where high-energies
 have been suppressed because they are generally not well constrained by the
 observations. For simplicity we assume the same prompt emission spectrum for all
 synthetic GRB, with $\alpha_{\mathrm{BAND}} = - 0.5$ and $E_{\mathrm{peak}} =
-600$ \, keV, close to the average short GRB spectrum observed by Fermi/GBM
+600$ keV, close to the average short GRB spectrum observed by Fermi/GBM
 \citep{2014ApJS..211...12G}. We also assume fixed duration of the prompt
 emission of $1 \, s$ and fixed isotropic equivalent luminosity of
 $10^{50}~$erg~cm$^{-2}$~s$^{-1}$.
@@ -111,7 +105,7 @@ $10^{50}~$erg~cm$^{-2}$~s$^{-1}$.
 The principal source of uncertainty on rate of GRB detections associated with
 the BNS mergers is the beaming factor of the prompt emission. We assume a fixed
 beaming angle of 10 degrees. This angle is roughly compatible with the observations
-of the total short GRB rate inferred from our BNS population.
+of the total short GRB rate inferred from our BNS population. 
 
 \subsection*{Hard X-ray afterglows}
 
@@ -121,11 +115,11 @@ much less frequently due to observational limitations. The INTEGRAL satellite
 (see next section) is well-suited for the observation of hard X-ray
 afterglows. There are indications that such afterglows are present in the most
 luminous GRBs occurring about once in few months (2\% of the sky observed by
-INTEGRAL). For instance, GRB120711A was seen by ISGRI and JEM-X for about 8
-hours \citep{2014A&A...567A..84M}. The bright hard X-ray emission afterglow
-found to be related to the bright gamma-ray afterglow, observed by Fermi/LAT in
-the energy range above 100 MeV with a consistent power-law spectrum with index
--2.
+INTEGRAL). %For instance, GRB120711A was seen by ISGRI and JEM-X for about 8
+%hours \citep{2014A&A...567A..84M}. The bright hard X-ray emission afterglow
+%found to be related to the bright gamma-ray afterglow, observed by Fermi/LAT in
+%the energy range above 100 MeV with a consistent power-law spectrum with index
+%-2.
 
 In this study, we assume that every BNS merger produces a hard X-ray
 afterglow with a spectrum similar to GRB120711A, but rescaled to the
@@ -153,7 +147,7 @@ $\Gamma_0$=200 and $t_{dec}=100~$s.
     \label{fluence_significance}
 \end{figure}
 
-The INTEGRAL satellite \citep{integral} carries a combination of pointing
+The INTEGRAL satellite \citep{2003A&A...411L...1W} carries a combination of pointing
 instruments (IBIS, JEM-X, OMC and SPI), covering wide
 energy range from 3 keV to 10 MeV. Low-energy subsystem of IBIS, - ISGRI can achieve a sensitivity of $3.7 \times 10^{-11}$~erg~cm$^2$~s in 20-60 keV in an area of about 1000~deg$^{2}$,
 with a continuous 100~ks exposure, reaching deeper than any other hard X-ray
@@ -170,9 +164,9 @@ time, and compare it with ISGRI sensitivity in 100~ks exposure.
 \subsection*{Prompt -- Passive follow-up}
 
 Choosing an isotropic sky distribution for the passive follow-up
-emission (passive follow-up) of our GW events, we show that in every
+emission (prompt emission) of our GW events, we show that in every
 case where the Earth is within the GRB emission cone, INTEGRAL detects
-prompt emission with significance at least 50~sigma. In the LIGO LH
+prompt emission with significance at least 40~sigma. In the LIGO LH
 configuration (or LIGO/Virgo LVH) the rate of detection is 0.02
 (0.025) in the 6 months of O2 for GW alerts ($\mathrm{SNR} \geq
 9$). Using SPI-ACS, IBIS/Veto, and IBIS it is possible to derive a
